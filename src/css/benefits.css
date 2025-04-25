@@ -1,25 +1,25 @@
 /* Секція Benefits */
 .benefits-section {
-  padding: 40px 32px;
+  padding: 32px 32px;
   background-color: #f9f9f9;
 }
 
 /* Заголовок */
 .benefits-title {
   max-width: 681px;
-  font-family: Impact, sans-serif;
+  font-family: Impact;
   font-weight: 400;
   font-size: 108px;
   line-height: 124px;
   letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 60px;
+  color: #292929;
+  margin-top: 80px;
+  margin-bottom: 40px;
   white-space: normal;
 }
 
 .benefits-title span {
-  color: #00b56e;
+  color: #00B068;
 }
 
 /* Список переваг */
@@ -28,7 +28,6 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 32px;
 }
 
@@ -57,22 +56,22 @@
 }
 
 .benefits-item-title {
-  font-family: Poppins, sans-serif;
+  font-family: Poppins;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #000;
+  color: #292929;
   margin-bottom: 8px;
 }
 
 .benefits-item-text {
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
+  font-family: Poppins;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #333;
+  color: #292929;
 }
 
 /* Tablet */
@@ -90,6 +89,6 @@
   }
 
   .benefits-section {
-    padding: 80px 60px;
+    padding: 80px 40px;
   }
 }
