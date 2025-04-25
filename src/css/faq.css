@@ -1,0 +1,95 @@
+.faq-section {
+  margin: 0 auto;
+  /* padding: 20px; */
+  background: white;
+  /* border-radius: 10px; */
+}
+
+.faq-title {
+  font-family: 'Poppins Bold', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 115%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  font-weight: 900;
+  color: #292929;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.faq-title span {
+  color: #00a651;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  background: #e6f5e9;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '▾';
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  /* background: #e6f5e9; */
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.faq-answer.open {
+  padding: 15px;
+  max-height: 500px;
+  /* Достатньо велике значення */
+}
+
+.faq-answer p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Адаптивність */
+@media (min-width: 360px) {
+  .faq-title {
+    font-size: 52px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+}
