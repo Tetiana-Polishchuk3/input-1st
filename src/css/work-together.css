@@ -1,0 +1,180 @@
+section#contact {
+    padding: 24px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    padding: 20px;
+    display: inline-block;
+    border: none;
+   
+}
+@media screen and (min-width: 1280px) {
+    h2 {
+        border: 4px solid #3AAA63;
+    }
+}
+h2 strong {
+    color: #000;
+}
+
+h2 span {
+    color: #3AAA63;
+    display: block;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 8px;
+    color: #333;
+}
+
+.contact-info svg {
+    fill: #3AAA63;
+    width: 20px;
+    height: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1f2f4;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #3AAA63;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    margin-top: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    button[type="submit"] {
+        width: auto;
+        max-width: 200px;
+       
+    }
+}
+button[type="submit"]:hover {
+    background-color: #329c59;
+}
+
+/* ==== MOBILE ==== */
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 26px;
+        padding: 12px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* ==== TABLET (768px–1279px) ==== */
+@media screen and (min-width: 768px) {
+    section#contact {
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    input[type="email"],
+    textarea {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        font-size: 18px;
+    }
+}
+
+/* ==== DESKTOP з 1280px ==== */
+@media screen and (min-width: 1280px) {
+    section#contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 60px 80px;
+    }
+
+    .contact-left {
+        flex: 1;
+    }
+
+    .contact-right {
+        flex: 1;
+        max-width: 480px;
+    }
+
+    h2 {
+        font-size: 56px;
+        padding: 30px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    form {
+        margin-top: 0;
+    }
+}
