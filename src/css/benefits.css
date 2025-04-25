@@ -1,0 +1,95 @@
+/* Секція Benefits */
+.benefits-section {
+  padding: 40px 32px;
+  background-color: #f9f9f9;
+}
+
+/* Заголовок */
+.benefits-title {
+  max-width: 681px;
+  font-family: Impact, sans-serif;
+  font-weight: 400;
+  font-size: 108px;
+  line-height: 124px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 60px;
+  white-space: normal;
+}
+
+.benefits-title span {
+  color: #00b56e;
+}
+
+/* Список переваг */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Окремий елемент списку */
+.benefits-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.benefits-icon {
+  width: 40px;
+  height: 40px;
+  background: #c4f1de;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #292929;
+}
+
+/* Текстова частина елемента */
+.benefits-text-wrapper {
+  max-width: 300px;
+}
+
+.benefits-item-title {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.benefits-item-text {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .benefits-list {
+    gap: 60px;
+  }
+
+  .benefits-section {
+    padding: 80px 60px;
+  }
+}
