@@ -1,10 +1,10 @@
-section#contact {
+.contact-section {
     padding: 24px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h2 {
+.contact-heading {
     font-size: 32px;
     font-weight: 900;
     margin-bottom: 16px;
@@ -12,19 +12,18 @@ h2 {
     padding: 20px;
     display: inline-block;
     border: none;
-   
 }
 
-h2 strong {
+.contact-heading strong {
     color: #000;
 }
 
-h2 span {
+.contact-heading span {
     color: #3AAA63;
     display: block;
 }
 
-p {
+.contact-description {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 24px;
@@ -38,7 +37,7 @@ p {
     margin-bottom: 32px;
 }
 
-.contact-info div {
+.contact-item {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -52,15 +51,15 @@ p {
     height: 20px;
 }
 
-form {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-top: 24px;
 }
 
-input[type="email"],
-textarea {
+.contact-input,
+.contact-textarea {
     width: 100%;
     padding: 14px;
     border: none;
@@ -69,12 +68,12 @@ textarea {
     font-size: 14px;
 }
 
-textarea {
+.contact-textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-button[type="submit"] {
+.contact-button {
     background-color: #3AAA63;
     color: white;
     padding: 12px 24px;
@@ -86,40 +85,34 @@ button[type="submit"] {
     display: inline-block;
     margin-top: 20px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-    button[type="submit"] {
-        width: auto;
-        max-width: 200px;
-       
-    }
-}
-button[type="submit"]:hover {
+
+.contact-button:hover {
     background-color: #329c59;
 }
 
 /* ==== MOBILE ==== */
 @media screen and (max-width: 767px) {
-    h2 {
+    .contact-heading {
         font-size: 26px;
         padding: 12px;
     }
 
-    button[type="submit"] {
+    .contact-button {
         width: 100%;
     }
 }
 
-/* ==== TABLET (768px–1279px) ==== */
+/* ==== TABLET ==== */
 @media screen and (min-width: 768px) {
-    section#contact {
+    .contact-section {
         padding: 40px;
     }
 
-    h2 {
+    .contact-heading {
         font-size: 48px;
     }
 
-    p {
+    .contact-description {
         font-size: 16px;
         max-width: 600px;
     }
@@ -130,19 +123,20 @@ button[type="submit"]:hover {
         gap: 32px;
     }
 
-    input[type="email"],
-    textarea {
+    .contact-input,
+    .contact-textarea {
         font-size: 16px;
     }
 
-    button[type="submit"] {
+    .contact-button {
         font-size: 18px;
+        max-width: 200px;
     }
 }
 
-/* ==== DESKTOP з 1280px ==== */
+/* ==== DESKTOP ==== */
 @media screen and (min-width: 1280px) {
-    section#contact {
+    .contact-section {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -160,17 +154,17 @@ button[type="submit"]:hover {
         max-width: 480px;
     }
 
-    h2 {
+    .contact-heading {
         font-size: 56px;
         padding: 30px;
         margin-bottom: 24px;
     }
 
-    p {
+    .contact-description {
         font-size: 18px;
     }
 
-    form {
+    .contact-form {
         margin-top: 0;
     }
 }
