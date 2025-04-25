@@ -1,6 +1,10 @@
 .tech-skills {
     margin-top: 80px;
 }
+.ts-container {
+    margin: 0;
+    padding: 0;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -18,12 +22,16 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     background-color: #bcdfd1;
+    
 }
 .second-line {
     background-color: #e4e5e6;
     transform: rotate(2deg);
+    
 }
 .running-ts-inner {
     display: flex;
@@ -34,7 +42,7 @@
 .running-ts-line {
     flex-shrink: 0;
     margin: 0;
-    padding: 10px 8px;
+    padding: 32px 8px;
     min-width: 100%;
     white-space: nowrap;
     animation-name: techSkillsLine;
@@ -63,7 +71,12 @@
         transform: translateX(0);
     }
 }
-.running-ts-line:hover, .opposite:hover {
-    animation-play-state: paused;
-    cursor: pointer;
+@media only screen and (min-width: 768px) {
+    .running-ts {
+        line-height: 1.33333;
+        letter-spacing: 0.01em;
+    }
+    .running-ts-line {
+        padding: 40px 8px;
+    }
 }
