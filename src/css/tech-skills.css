@@ -1,0 +1,69 @@
+.tech-skills {
+    margin-top: 80px;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.running-ts {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    background-color: #bcdfd1;
+}
+.second-line {
+    background-color: #e4e5e6;
+    transform: rotate(2deg);
+}
+.running-ts-inner {
+    display: flex;
+}
+.green {
+    color: #00b068;
+}
+.running-ts-line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 10px 8px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: techSkillsLine;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.opposite {
+    animation-name: techSkillsLineOpposite;
+}
+@keyframes techSkillsLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes techSkillsLineOpposite {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.running-ts-line:hover, .opposite:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
