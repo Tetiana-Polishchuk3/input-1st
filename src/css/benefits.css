@@ -1,5 +1,6 @@
 /* Секція Benefits */
 .benefits-section {
+
   max-width: 1280px;
   margin: 80px auto 32px;
   padding: 0 32px;
@@ -13,6 +14,7 @@
   background-position: center;
 }
 
+
 /* Заголовок */
 .benefits-title {
   width: 320px;
@@ -24,7 +26,11 @@
   letter-spacing: 1.8px;
   vertical-align: middle;
   color: #292929;
-}
+
+  margin-bottom: 40px;
+ }
+
+
 
 .benefits-title span {
   color: #00b068;
@@ -32,30 +38,60 @@
 
 /* Список переваг */
 .benefits-list {
+  height: 888px;
+  gap: 32px;
   flex-direction: column;
-  gap: 24px;
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
 
+
 /* Общий стиль для карточек */
 .benefits-item {
-  padding: 20px;
+  height: 204px;
+  border-radius: 16px;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.benefits-item-art {
+   height: 180px;
+}
+.benefits-icon {
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  background-color: #BCDFD1;
+  margin-bottom: 16px;
+ }
+.benefits-icon-expertise {
+  background-image: url('/src/img/benefits/Expertise.svg');
+}
+.benefits-icon-communication {
+  background-image: url('/src/img/benefits/Communication.svg'); 
+}
+.benefits-icon-art {
+  background-image: url('/src/img/benefits/Art.svg');  
+}
+.benefits-icon-urgent {
+  background-image: url('/src/img/benefits/Urgent.svg');  
+
 }
 .benefits-item-title {
-  width: 320px;
   height: 28px;
   font-family: Poppins;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  
 }
 .benefits-item-text {
   width: 320px;
+>>>>>>> main
   height: 96px;
   font-weight: 300;
   font-size: 16px;
@@ -110,9 +146,18 @@
 /* ======= DESKTOP ======= */
 @media (min-width: 1280px) {
   .benefits-title {
-    width: 681px;
-    height: 372px;
-    left: 32px;
+
+  width: 681px;
+  height: 372px;
+  left: 32px;
+  background-image: image-set(
+    url('/src/img/benefits/benefits-bg@1x.png') 1x,
+    url('/src/img/benefits/benefits-bg@2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   }
   .benefits-list {
     grid-template-columns: repeat(3, 1fr);
