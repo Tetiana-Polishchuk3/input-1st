@@ -7,15 +7,16 @@
 
 /* Заголовок */
 .benefits-title {
-  max-width: 681px;
+  width: 320px;
+  height: 192px;
   font-family: Impact;
   font-weight: 400;
-  font-size: 108px;
-  line-height: 124px;
+  font-size: 52px;
+  line-height: 64px;
   letter-spacing: 1.8px;
+  vertical-align: middle;
   color: #292929;
-  white-space: normal;
-}
+ }
 
 .benefits-title span {
   color: #00B068;
@@ -23,23 +24,51 @@
 
 /* Список переваг */
 .benefits-list {
-  display: flex;
   flex-direction: column;
   gap: 24px;
   list-style: none;
   padding: 0;
-  margin: 0;
-}
+  margin: 0;}
 
 /* Общий стиль для карточек */
 .benefits-item {
-  padding: 16px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
+.benefits-item-title {
+  width: 320px;
+  height: 28px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  }
+  .benefits-item-text {
+  width: 320px;
+  height: 96px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  }
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
+.benefits-title {
+  width: 704px;
+  height: 372px;
+  font-size: 108px;
+  line-height: 124px;
+  letter-spacing: 1.8px;
+  }
+.benefits-item-title {
+  width: 336px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 32px;
+  }
+ 
   .benefits-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -50,6 +79,7 @@
   .expertise {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    margin-top: -30px;
   }
 
   .benefits-item:nth-child(2) {
@@ -70,6 +100,11 @@
 
 /* ======= DESKTOP ======= */
 @media (min-width: 1280px) {
+  .benefits-title {
+  width: 681px;
+  height: 372px;
+  left: 32px;
+  }
   .benefits-list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
