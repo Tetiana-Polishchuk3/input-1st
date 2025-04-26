@@ -14,8 +14,6 @@
   line-height: 124px;
   letter-spacing: 1.8px;
   color: #292929;
-  margin-top: 80px;
-  margin-bottom: 40px;
   white-space: normal;
 }
 
@@ -49,7 +47,7 @@
     gap: 32px;
   }
 
-  .urgent {
+  .expertise {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
@@ -77,7 +75,7 @@
     grid-template-rows: auto auto;
   }
 
-  .urgent {
+  .expertise {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
   }
