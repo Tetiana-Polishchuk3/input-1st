@@ -1,7 +1,6 @@
-/* Базові стилі для всієї секції My Projects */
+/* Базові стилі для всієї секції My Projects (тепер Portfolio) */
 .projects {
   padding: 80px 20px;
-  background-color: #f9f9f9;
 }
 
 .projects .container {
@@ -12,7 +11,9 @@
 
 .projects .section-title {
   font-family: 'Poppins Bold', sans-serif;
-  color: #292929;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #292929; /* BLACK */
   text-align: center;
   white-space: nowrap;
   margin-bottom: 40px;
@@ -32,10 +33,7 @@
 }
 
 .project-card {
-  background-color: #f0f0f0;
-  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -54,17 +52,15 @@
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.2px;
-  color: #8b8b8b;
-  padding: 10px 15px;
-  margin-top: 10px;
-  margin-bottom: 0;
+  color: #292929;
+  padding-top: 16px;
+  padding-bottom: 20px;
 }
 
 .project-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
 }
 
 .project-info .project-title {
@@ -83,60 +79,99 @@
   font-family: 'Poppins Medium', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  color: #00b068;
-  background-color: transparent;
-  border: 2px solid #00b068;
+  color: #292929;
+  border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background: #e4e5e6;
 }
 
 .project-visit-button svg {
-  fill: #00b068;
+  fill: #292929;
 }
 
 .project-visit-button:hover {
-  background-color: #00b068;
-  color: #f0f0f0;
+  background-color: #8b8b8b;
+
+  svg {
+    fill: #f0f0f0;
+  }
 }
 
 .load-more-button {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: 'Poppins Medium', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  color: #00b068;
+  color: #292929;
   background-color: transparent;
-  border: 2px solid #00b068;
-  padding: 15px 30px;
+  border: none;
+  padding: 0;
   margin: 40px auto 0 auto;
-  border-radius: 8px;
   cursor: pointer;
+}
+
+.load-more-button::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #00b068;
+  margin-top: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .load-more-button:hover {
+  color: #00b068;
+}
+
+.load-more-button:hover::after {
   background-color: #00b068;
-  color: #f0f0f0;
 }
 
 /* Адаптивні стилі для планшетів (від 768px) */
 @media screen and (min-width: 768px) {
   .projects .section-title {
     font-size: 64px;
-    line-height: 1.9375;
+    line-height: 1.5625;
     letter-spacing: -0.0156em;
+  }
+
+  .load-more-button {
+    font-size: 18px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 10px;
   }
 }
 
 /* Адаптивні стилі для десктопів (від 1280px) */
 @media screen and (min-width: 1280px) {
+  .projects {
+    padding: 120px 40px;
+  }
+
   .projects .section-title {
     font-size: 108px;
     line-height: 1.148;
     letter-spacing: -0.022em;
     margin-bottom: 80px;
+  }
+
+  .load-more-button {
+    font-size: 20px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 12px;
   }
 }
 
@@ -145,5 +180,15 @@
   .projects .section-title {
     font-size: 40px;
     line-height: 1.6;
+  }
+
+  .load-more-button {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 6px;
   }
 }
