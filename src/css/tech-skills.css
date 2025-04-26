@@ -1,8 +1,8 @@
 .tech-skills {
     margin-top: 80px;
 }
-.ts-container {
-    margin: 0;
+#ts {
+    max-width: 100%;
     padding: 0;
 }
 .visually-hidden {
