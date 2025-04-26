@@ -31,15 +31,15 @@
   flex-direction: column;
   align-items: center;
   transform: translateX(100%);
-  background: url('/img/mobile-menu.img/mobile.bg@1x.jpg') no-repeat center
-    center;
+  background-image: url('/img/mobile-menu.img/mobile.bg@1x.jpg') no-repeat
+    center center;
   background-size: cover;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .menu {
-    background: url('/img/mobile-menu.img/mobile.bg@2x.jpg') no-repeat center
-      center;
+    background-image: url('/img/mobile-menu.img/mobile.bg@2x.jpg') no-repeat
+      center center;
     background-size: cover;
   }
 }
