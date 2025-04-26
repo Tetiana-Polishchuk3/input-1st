@@ -1,4 +1,29 @@
-/* Список преимуществ */
+/* Секція Benefits */
+.benefits-section {
+  max-width: 1280px;   
+  margin: 80px auto 32px; 
+  padding: 0 32px;
+}
+
+/* Заголовок */
+.benefits-title {
+  max-width: 681px;
+  font-family: Impact;
+  font-weight: 400;
+  font-size: 108px;
+  line-height: 124px;
+  letter-spacing: 1.8px;
+  color: #292929;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  white-space: normal;
+}
+
+.benefits-title span {
+  color: #00B068;
+}
+
+/* Список переваг */
 .benefits-list {
   list-style: none;
   padding: 0;
@@ -7,36 +32,32 @@
   gap: 32px;
 }
 
-/* Элемент списка */
+/* Окремий елемент списку */
 .benefits-item {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
   display: flex;
-  flex-direction: column; 
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-/* Иконка */
+/* Подстраиваем <img> под ваш контейнер */
 .benefits-icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: #BCDFD1;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
 }
 
-/* Картинка внутри иконки */
+/* Сами иконки */
 .benefits-icon img {
-  width: 24px;
+  display: block;
+  width: 24px;    /* подгоняем размер SVG */
   height: 24px;
 }
 
-/* Текстовая часть */
+/* Текстова частина елемента */
 .benefits-text-wrapper {
   max-width: 300px;
 }
@@ -60,19 +81,15 @@
   color: #292929;
 }
 
-.large {
-  grid-row: span 2; 
-}
-
-/* Адаптив */
+/* Tablet */
 @media (min-width: 768px) {
   .benefits-list {
-    grid-template-columns: repeat(3, 1fr) 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 }
 
+/* Desktop */
 @media (min-width: 1280px) {
   .benefits-list {
     gap: 60px;
@@ -81,4 +98,4 @@
   .benefits-section {
     padding: 80px 40px;
   }
-}
+} 
