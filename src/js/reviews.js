@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Keyboard, A11y } from 'swiper/modules';
+import fetchData from './api';
 
 let swiper;
 
@@ -12,9 +13,7 @@ const fallbackText = document.querySelector('.fallback-text');
 
 const fetchReviews = async () => {
   try {
-    const { data } = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
+    const data = await fetchData('reviews');
 
     if (!data.length) throw new Error('No reviews');
 
@@ -34,13 +33,13 @@ function createSlidesMarkup(arr) {
   return arr
     .map(
       ({ author, avatar_url, review, _id }) => `
-      <div class="swiper-slide" id="${_id}">
+      <li class="swiper-slide" id="${_id}">
         <p class="review-text">${review}</p>
         <div class="review-author">
           <img src="${avatar_url}" alt="${author}" class="author-avatar" />
           <span class="review-author-name">${author}</span>
         </div>
-      </div>
+      </li>
     `
     )
     .join('');
