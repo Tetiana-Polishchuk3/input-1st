@@ -1,12 +1,12 @@
 /* Секція Benefits */
 .benefits-section {
-  max-width: 1280px;   
-  margin: 80px auto 32px; 
+  max-width: 1280px;
+  margin: 80px auto 32px;
   padding: 0 32px;
   min-height: 500px; /* додав мінімальну висоту */
   background-image: image-set(
-    url('../img/benefits/benefits-bg@1x.png') 1x,
-    url('../img/benefits/benefits-bg@2x.png') 2x
+    url('./img/benefits/benefits-bg@1x.png') 1x,
+    url('./img/benefits/benefits-bg@2x.png') 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,10 +24,10 @@
   letter-spacing: 1.8px;
   vertical-align: middle;
   color: #292929;
- }
+}
 
 .benefits-title span {
-  color: #00B068;
+  color: #00b068;
 }
 
 /* Список переваг */
@@ -36,13 +36,14 @@
   gap: 24px;
   list-style: none;
   padding: 0;
-  margin: 0;}
+  margin: 0;
+}
 
 /* Общий стиль для карточек */
 .benefits-item {
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 .benefits-item-title {
   width: 320px;
@@ -52,31 +53,31 @@
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.5px;
-  }
-  .benefits-item-text {
+}
+.benefits-item-text {
   width: 320px;
   height: 96px;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.5px;
-  }
+}
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
-.benefits-title {
-  width: 704px;
-  height: 372px;
-  font-size: 108px;
-  line-height: 124px;
-  letter-spacing: 1.8px;
+  .benefits-title {
+    width: 704px;
+    height: 372px;
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 1.8px;
   }
-.benefits-item-title {
-  width: 336px;
-  height: 32px;
-  font-size: 20px;
-  line-height: 32px;
+  .benefits-item-title {
+    width: 336px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
   }
- 
+
   .benefits-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -109,9 +110,9 @@
 /* ======= DESKTOP ======= */
 @media (min-width: 1280px) {
   .benefits-title {
-  width: 681px;
-  height: 372px;
-  left: 32px;
+    width: 681px;
+    height: 372px;
+    left: 32px;
   }
   .benefits-list {
     grid-template-columns: repeat(3, 1fr);

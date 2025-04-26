@@ -2,7 +2,7 @@ const modalBackdrop = document.getElementById('modalBackdrop');
 const closeModalBtn = document.getElementById('modalCloseBtn');
 const contactForm = document.getElementById('contactForm');
 
-// === Modal Functions ===
+
 function openModal() {
   modalBackdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open');
@@ -27,7 +27,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// === Toast Function ===
+
 function showToast(message, duration = 3000) {
   const toast = document.getElementById('toast');
   toast.textContent = message;
@@ -40,7 +40,7 @@ function showToast(message, duration = 3000) {
   }, duration);
 }
 
-// === Form Submit ===
+
 contactForm.addEventListener('submit', async e => {
   e.preventDefault();
 
@@ -53,7 +53,7 @@ contactForm.addEventListener('submit', async e => {
     return;
   }
 
-  // Open modal immediately after validation
+ 
   openModal();
   contactForm.reset();
 });
