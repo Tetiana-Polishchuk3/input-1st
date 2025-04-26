@@ -43,12 +43,23 @@
     font-size: 14px;
     gap: 8px;
     color: #333;
+    transition: color 0.3s ease;
 }
 
-.contact-info svg {
-    fill: #3AAA63;
+.contact-item svg {
+    fill: none;
+    stroke: #3AAA63;
     width: 20px;
     height: 20px;
+    transition: stroke 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #3AAA63;
+}
+
+.contact-item:hover svg {
+    stroke: #333;
 }
 
 .contact-form {
@@ -66,6 +77,14 @@
     border-radius: 8px;
     background-color: #f1f2f4;
     font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    border: 1px solid #3AAA63;
+    box-shadow: 0 0 5px rgba(58, 170, 99, 0.5);
+    outline: none;
 }
 
 .contact-textarea {
@@ -84,10 +103,33 @@
     width: auto;
     display: inline-block;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
     background-color: #329c59;
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-left {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.contact-right {
+    animation: fadeInUp 1s ease forwards;
 }
 
 /* ==== MOBILE ==== */
