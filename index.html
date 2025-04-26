@@ -17,7 +17,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
     <script type="module" crossorigin src="/input-1st/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/input-1st/assets/index-PbmIg8z-.css">
+    <link rel="modulepreload" crossorigin href="/input-1st/assets/vendor-CRSDqIG5.js">
+    <link rel="stylesheet" crossorigin href="/input-1st/assets/vendor-HdWFjXwp.css">
+    <link rel="stylesheet" crossorigin href="/input-1st/assets/index-Bn1uGL2-.css">
   </head>
   <body>
     <header class="header-page">
@@ -829,10 +831,19 @@
   </div>
 </section>
 
-      <section class="container reviews-section">
+      <section class="container reviews-section" id="reviews">
   <h2 class="reviews-title">REVIEWS</h2>
   <div class="reviews-wrapper">
-    <ul class="reviews-list"></ul>
+    <div class="swiper reviews-swiper">
+      <ul class="swiper-wrapper"></ul>
+
+      <div class="reviews-navigation">
+        <button class="swiper-button-prev" aria-label="Previous slide"></button>
+        <button class="swiper-button-next" aria-label="Next slide"></button>
+      </div>
+    </div>
+
+    <div class="fallback-text" hidden>Not found</div>
   </div>
 </section>
 
