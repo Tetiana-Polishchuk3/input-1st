@@ -1,7 +1,7 @@
-/* Базові стилі для всієї секції My Projects */
+/* Базові стилі для всієї секції My Projects (тепер Portfolio) */
 .projects {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
 }
 
 .projects .container {
@@ -12,14 +12,16 @@
 
 .projects .section-title {
   font-family: 'Poppins Bold', sans-serif;
-  color: #292929;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #292929; /* BLACK */
   text-align: center;
   white-space: nowrap;
   margin-bottom: 40px;
 }
 
 .projects .section-title .accent {
-  color: #00b068;
+  color: #00b068; /* ACCENT GREEN */
 }
 
 .projects-grid {
@@ -35,7 +37,6 @@
   background-color: #f0f0f0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -54,7 +55,7 @@
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.2px;
-  color: #8b8b8b;
+  color: #8b8b8b; /* HOVER GREY */
   padding: 10px 15px;
   margin-top: 10px;
   margin-bottom: 0;
@@ -71,7 +72,7 @@
   font-family: 'Poppins SemiBold', sans-serif;
   font-size: 20px;
   line-height: 1.3;
-  color: #292929;
+  color: #292929; /* BLACK */
   margin: 0;
 }
 
@@ -83,60 +84,99 @@
   font-family: 'Poppins Medium', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  color: #00b068;
-  background-color: transparent;
-  border: 2px solid #00b068;
+  color: #292929; /* BLACK */
+  border: none; /* Прибираємо рамку */
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background: #e4e5e6;
 }
 
 .project-visit-button svg {
-  fill: #00b068;
+  fill: #292929; /* BLACK (колір іконки) */
 }
 
 .project-visit-button:hover {
-  background-color: #00b068;
-  color: #f0f0f0;
+  background-color: #8b8b8b; /* HOVER GREY (фон при наведенні) */
+  color: #f0f0f0; /* WHITE (колір тексту при наведенні) */
+  svg {
+    fill: #f0f0f0; /* WHITE (колір іконки при наведенні) */
+  }
 }
 
 .load-more-button {
-  display: block;
+  display: flex;
+  flex-direction: column; /* Розміщуємо текст та підкреслення вертикально */
+  align-items: center; /* Центруємо текст горизонтально */
+  justify-content: center; /* Центруємо текст вертикально */
   font-family: 'Poppins Medium', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  color: #00b068;
+  color: #292929; /* BLACK (статичний колір тексту) */
   background-color: transparent;
-  border: 2px solid #00b068;
-  padding: 15px 30px;
+  border: none; /* Прибираємо рамку */
+  padding: 0; /* Прибираємо зайві відступи */
   margin: 40px auto 0 auto;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.load-more-button::after {
+  content: '';
+  display: block;
+  width: 100%; /* Підкреслення на всю ширину тексту */
+  height: 2px;
+  background-color: #00b068; /* ACCENT GREEN */
+  margin-top: 8px; /* Відступ між текстом та підкресленням */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Додаємо transition для плавної зміни кольору підкреслення */
 }
 
 .load-more-button:hover {
-  background-color: #00b068;
-  color: #f0f0f0;
+  color: #00b068; /* ACCENT GREEN (колір тексту при наведенні) */
+}
+
+.load-more-button:hover::after {
+  background-color: #00b068; /* ACCENT GREEN (колір підкреслення при наведенні) */
 }
 
 /* Адаптивні стилі для планшетів (від 768px) */
 @media screen and (min-width: 768px) {
   .projects .section-title {
     font-size: 64px;
-    line-height: 1.9375;
+    line-height: 1.5625;
     letter-spacing: -0.0156em;
+  }
+
+  .load-more-button {
+    font-size: 18px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 10px;
   }
 }
 
 /* Адаптивні стилі для десктопів (від 1280px) */
 @media screen and (min-width: 1280px) {
+  .projects {
+    padding: 120px 40px;
+  }
+
   .projects .section-title {
     font-size: 108px;
     line-height: 1.148;
     letter-spacing: -0.022em;
     margin-bottom: 80px;
+  }
+
+  .load-more-button {
+    font-size: 20px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 12px;
   }
 }
 
@@ -145,5 +185,15 @@
   .projects .section-title {
     font-size: 40px;
     line-height: 1.6;
+  }
+
+  .load-more-button {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .load-more-button::after {
+    height: 2px;
+    margin-top: 6px;
   }
 }
