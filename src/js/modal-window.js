@@ -1,0 +1,59 @@
+const modalBackdrop = document.getElementById('modalBackdrop');
+const closeModalBtn = document.getElementById('modalCloseBtn');
+const contactForm = document.getElementById('contactForm');
+
+
+function openModal() {
+  modalBackdrop.classList.remove('is-hidden');
+  document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+  modalBackdrop.classList.add('is-hidden');
+  document.body.classList.remove('modal-open');
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+
+modalBackdrop.addEventListener('click', e => {
+  if (e.target === modalBackdrop) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
+
+
+function showToast(message, duration = 3000) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.remove('hidden');
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.classList.add('hidden'), 300);
+  }, duration);
+}
+
+
+contactForm.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const email = contactForm.elements.email.value.trim();
+  const message = contactForm.elements.message.value.trim();
+
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  if (!emailPattern.test(email)) {
+    showToast('Please enter a valid email address.');
+    return;
+  }
+
+ 
+  openModal();
+  contactForm.reset();
+});
