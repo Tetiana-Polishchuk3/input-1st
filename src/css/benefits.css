@@ -3,9 +3,10 @@
   max-width: 1280px;   
   margin: 80px auto 32px; 
   padding: 0 32px;
+  min-height: 500px; /* додав мінімальну висоту */
   background-image: image-set(
     url('../img/benefits/benefits-bg@1x.png') 1x,
-    url('../img/benefits/benefits-bg@2x.png.png') 2x
+    url('../img/benefits/benefits-bg@2x.png') 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
