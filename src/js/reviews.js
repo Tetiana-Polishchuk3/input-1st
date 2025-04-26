@@ -1,16 +1,3 @@
-// import axios from 'axios';
-
-// const fetchPosts = async () => {
-//   const response = await axios.get(
-//     'https://portfolio-js.b.goit.study/api/reviews'
-//   );
-//   console.log('Posts: ', response.data);
-// };
-
-// fetchPosts();
-
-// _______________________________
-
 import axios from 'axios';
 import Swiper from 'swiper';
 import 'swiper/css';
