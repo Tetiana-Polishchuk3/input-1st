@@ -1,99 +1,29 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const loadMoreButton = document.querySelector('.load-more-button');
-//   const projectsGrid = document.querySelector('.projects-grid');
-//   const initialPhotosCount = projectsGrid.children.length;
-//   let loadedPhotosCount = 0;
-
-//   const newPhotosData = [
-//     {
-//       url: '/img/my-project/img_4@x2.jpg',
-//       alt: 'STARLIGHT STUDIO LANDING PAGE',
-//     },
-//     { url: '/img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
-//     { url: '/img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
-//     { url: '/img/my-project/img_7@x2.jpg', alt: 'CHEGO JEWELRY WEBSITE' },
-//     { url: '/img/my-project/img_8@x2.jpg', alt: 'MIMINO WEBSITE' },
-//     {
-//       url: '/img/my-project/img_9@x2.jpg',
-//       alt: 'VYSHYVANKA VIBES LANDING PAGE',
-//     },
-//     { url: '/img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
-//   ];
-
-//   if (loadMoreButton) {
-//     loadMoreButton.addEventListener('click', function () {
-
-//       const startIndex = loadedPhotosCount;
-
-//       const endIndex = Math.min(startIndex + 3, newPhotosData.length);
-//       const photosToLoad = newPhotosData.slice(startIndex, endIndex);
-
-//       if (photosToLoad.length > 0) {
-//         photosToLoad.forEach(photoData => {
-//           const projectCard = document.createElement('li');
-//           projectCard.classList.add('project-card');
-
-//           const img = document.createElement('img');
-//           img.src = photoData.url;
-//           img.alt = photoData.alt;
-
-//           const caption = document.createElement('p');
-//           caption.classList.add('project-caption');
-//           caption.textContent = photoData.alt;
-
-//           projectCard.appendChild(img);
-//           projectCard.appendChild(caption);
-//           projectsGrid.appendChild(projectCard);
-//         });
-
-//         loadedPhotosCount += photosToLoad.length;
-
-//         if (loadedPhotosCount >= newPhotosData.length) {
-//           loadMoreButton.style.display = 'none';
-//         }
-//       }
-//     });
-//   }
-// });
 document.addEventListener('DOMContentLoaded', function () {
   const loadMoreButton = document.querySelector('.load-more-button');
   const projectsGrid = document.querySelector('.projects-grid');
+  const initialPhotosCount = projectsGrid.children.length;
   let loadedPhotosCount = 0;
 
   const newPhotosData = [
     {
-      baseName: 'img_4',
+      url: '/img/my-project/img_4@x2.jpg',
       alt: 'STARLIGHT STUDIO LANDING PAGE',
     },
+    { url: '/img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
+    { url: '/img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
+    { url: '/img/my-project/img_7@x2.jpg', alt: 'CHEGO JEWELRY WEBSITE' },
+    { url: '/img/my-project/img_8@x2.jpg', alt: 'MIMINO WEBSITE' },
     {
-      baseName: 'img_5',
-      alt: 'ENERGY FLOW WEBSERVICE',
-    },
-    {
-      baseName: 'img_6',
-      alt: 'FRUITBOX ONLINE STORE',
-    },
-    {
-      baseName: 'img_7',
-      alt: 'CHEGO JEWELRY WEBSITE',
-    },
-    {
-      baseName: 'img_8',
-      alt: 'MIMINO WEBSITE',
-    },
-    {
-      baseName: 'img_9',
+      url: '/img/my-project/img_9@x2.jpg',
       alt: 'VYSHYVANKA VIBES LANDING PAGE',
     },
-    {
-      baseName: 'img_10',
-      alt: 'POWER PULSE WEBSERVICE',
-    },
+    { url: '/img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
   ];
 
   if (loadMoreButton) {
     loadMoreButton.addEventListener('click', function () {
       const startIndex = loadedPhotosCount;
+
       const endIndex = Math.min(startIndex + 3, newPhotosData.length);
       const photosToLoad = newPhotosData.slice(startIndex, endIndex);
 
@@ -102,34 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
           const projectCard = document.createElement('li');
           projectCard.classList.add('project-card');
 
-          const picture = document.createElement('picture');
-
-          const sourceDesktop = document.createElement('source');
-          sourceDesktop.media = '(min-width: 1280px)';
-          sourceDesktop.srcset = `/img/my-project/${photoData.baseName}@x1.jpg 1x, /img/my-project/${photoData.baseName}@x2.jpg 2x`;
-
-          const sourceTablet = document.createElement('source');
-          sourceTablet.media = '(min-width: 768px)';
-          sourceTablet.srcset = `/img/my-project/${photoData.baseName}@x1.jpg 1x, /img/my-project/${photoData.baseName}@x2.jpg 2x`;
-
-          const sourceMobile = document.createElement('source');
-          sourceMobile.media = '(max-width: 767px)';
-          sourceMobile.srcset = `/img/my-project/${photoData.baseName}@x1.jpg 1x, /img/my-project/${photoData.baseName}@x2.jpg 2x`;
-
           const img = document.createElement('img');
-          img.src = `/img/my-project/${photoData.baseName}@x1.jpg`;
+          img.src = photoData.url;
           img.alt = photoData.alt;
-
-          picture.appendChild(sourceDesktop);
-          picture.appendChild(sourceTablet);
-          picture.appendChild(sourceMobile);
-          picture.appendChild(img);
 
           const caption = document.createElement('p');
           caption.classList.add('project-caption');
           caption.textContent = photoData.alt;
 
-          projectCard.appendChild(picture);
+          projectCard.appendChild(img);
           projectCard.appendChild(caption);
           projectsGrid.appendChild(projectCard);
         });
