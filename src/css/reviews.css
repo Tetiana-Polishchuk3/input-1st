@@ -24,7 +24,8 @@
   width: 40px;
   border-radius: 50px;
 }
-.swiper-slide {
+
+.swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,7 +33,12 @@
   border-radius: 16px;
   padding: 32px;
   min-height: 296px;
+  max-height: 296px;
   height: 100%;
+  max-width: 320px;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+  /* flex-shrink: 0; */
 }
 
 .review-text {
@@ -107,7 +113,7 @@
     margin-bottom: 60px;
   }
 
-  .swiper-slide {
+  .swiper-wrapper .swiper-slide {
     max-width: 704px;
     min-height: 224px;
   }
