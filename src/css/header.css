@@ -1,3 +1,7 @@
+.header-page {
+  position: relative;
+}
+
 .navigation-header {
   display: flex;
   align-items: center;
