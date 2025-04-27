@@ -369,23 +369,46 @@
       <section id="projects" class="projects">
   <div class="container">
     <h2 class="section-title">MY <span class="accent">PROJECTS</span></h2>
+    <script>
+      // Determine if we're on GitHub Pages
+      const isGitHubPages = window.location.hostname.includes('github.io');
+      const basePath = isGitHubPages ? '/input-1st' : '';
+
+      // Function to update image paths
+      function updateImagePaths() {
+        const images = document.querySelectorAll('img[src^="../img"]');
+        images.forEach(img => {
+          const newSrc = img.src.replace('../img', `${basePath}/img`);
+          img.src = newSrc;
+        });
+
+        const sources = document.querySelectorAll('source[srcset^="../img"]');
+        sources.forEach(source => {
+          const newSrcset = source.srcset.replace('../img', `${basePath}/img`);
+          source.srcset = newSrcset;
+        });
+      }
+
+      // Update paths when DOM is loaded
+      document.addEventListener('DOMContentLoaded', updateImagePaths);
+    </script>
     <ul class="projects-grid">
       <li class="project-card">
         <picture>
           <source
             media="(min-width: 1280px)"
-            srcset="/input-1st/assets/img_1@x1-DSJSxJRd.jpg 1x, /input-1st/assets/img_1@x2-CHy9VTko.jpg 2x"
+            srcset="../img/my-project/img_1@x1.jpg 1x, ../img/my-project/img_1@x2.jpg 2x"
           />
           <source
             media="(min-width: 768px)"
-            srcset="/input-1st/assets/img_1@x1-DSJSxJRd.jpg 1x, /input-1st/assets/img_1@x2-CHy9VTko.jpg 2x"
+            srcset="../img/my-project/img_1@x1.jpg 1x, ../img/my-project/img_1@x2.jpg 2x"
           />
           <source
             media="(max-width: 767px)"
-            srcset="/input-1st/assets/img_1@x1-DSJSxJRd.jpg 1x, /input-1st/assets/img_1@x2-CHy9VTko.jpg 2x"
+            srcset="../img/my-project/img_1@x1.jpg 1x, ../img/my-project/img_1@x2.jpg 2x"
           />
           <img
-            src="/input-1st/assets/img_1@x1-DSJSxJRd.jpg"
+            src="../img/my-project/img_1@x1.jpg"
             alt="Скріншот вебсервісу Green Harvest"
           />
         </picture>
@@ -423,18 +446,18 @@
         <picture>
           <source
             media="(min-width: 1280px)"
-            srcset="/input-1st/assets/img_2@x1-Cx0OfIZ8.jpg 1x, /input-1st/assets/img_2@x2-B49eEshZ.jpg 2x"
+            srcset="../img/my-project/img_2@x1.jpg 1x, ../img/my-project/img_2@x2.jpg 2x"
           />
           <source
             media="(min-width: 768px)"
-            srcset="/input-1st/assets/img_2@x1-Cx0OfIZ8.jpg 1x, /input-1st/assets/img_2@x2-B49eEshZ.jpg 2x"
+            srcset="../img/my-project/img_2@x1.jpg 1x, ../img/my-project/img_2@x2.jpg 2x"
           />
           <source
             media="(max-width: 767px)"
-            srcset="/input-1st/assets/img_2@x1-Cx0OfIZ8.jpg 1x, /input-1st/assets/img_2@x2-B49eEshZ.jpg 2x"
+            srcset="../img/my-project/img_2@x1.jpg 1x, ../img/my-project/img_2@x2.jpg 2x"
           />
           <img
-            src="/input-1st/assets/img_2@x1-Cx0OfIZ8.jpg"
+            src="../img/my-project/img_2@x1.jpg"
             alt="Скріншот вебсервісу Green Harvest"
           />
         </picture>
@@ -470,18 +493,18 @@
         <picture>
           <source
             media="(min-width: 1280px)"
-            srcset="/input-1st/assets/img_3@x1-CzearXQ2.jpg 1x, /input-1st/assets/img_3@x2-BSM3kdE3.jpg 2x"
+            srcset="../img/my-project/img_3@x1.jpg 1x, ../img/my-project/img_3@x2.jpg 2x"
           />
           <source
             media="(min-width: 768px)"
-            srcset="/input-1st/assets/img_3@x1-CzearXQ2.jpg 1x, /input-1st/assets/img_3@x2-BSM3kdE3.jpg 2x"
+            srcset="../img/my-project/img_3@x1.jpg 1x, ../img/my-project/img_3@x2.jpg 2x"
           />
           <source
             media="(max-width: 767px)"
-            srcset="/input-1st/assets/img_3@x1-CzearXQ2.jpg 1x, /input-1st/assets/img_3@x2-BSM3kdE3.jpg 2x"
+            srcset="../img/my-project/img_3@x1.jpg 1x, ../img/my-project/img_3@x2.jpg 2x"
           />
           <img
-            src="/input-1st/assets/img_3@x1-CzearXQ2.jpg"
+            src="../img/my-project/img_3@x1.jpg"
             alt="Скріншот вебсервісу English Excellence"
           />
         </picture>
