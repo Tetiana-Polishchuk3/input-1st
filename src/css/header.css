@@ -21,8 +21,8 @@
 .nav-logo-header span {
   color: #00b068;
 }
-.header-icon {
-  display: inline-block;
+.menu-toggle {
+  display: flex;
   width: 1em;
   height: 1em;
   stroke-width: 0;
@@ -56,6 +56,10 @@
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: #292929;
+  }
+  .link-header:hover,
+  .link-header:focus {
+    color: #00b068;
   }
 }
 
