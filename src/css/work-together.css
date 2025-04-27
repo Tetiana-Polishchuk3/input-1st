@@ -179,6 +179,7 @@
 /* ==== DESKTOP ==== */
 @media screen and (min-width: 1280px) {
     .contact-section {
+        width: 1200px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

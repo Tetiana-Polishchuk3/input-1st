@@ -19,6 +19,13 @@
   visibility: hidden;
   pointer-events: none;
 }
+.iconClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+}
 
 body.modal-open {
   overflow: hidden;
@@ -44,8 +51,8 @@ body.modal-open {
 
   .iconClose {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     width: 24px;
     height: 24px;
     outline: none;

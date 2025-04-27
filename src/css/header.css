@@ -1,3 +1,7 @@
+.header-page {
+  position: relative;
+}
+
 .navigation-header {
   display: flex;
   align-items: center;
@@ -21,15 +25,17 @@
 .nav-logo-header span {
   color: #00b068;
 }
-.header-icon {
-  display: inline-block;
+.menu-toggle {
+  border: none;
+}
+.icon-header {
+  display: flex;
   width: 1em;
   height: 1em;
   stroke-width: 0;
   stroke: #292929;
   fill: #292929;
 }
-
 @media screen and (min-width: 768px) {
   .navigation-header {
     gap: 166px;
@@ -39,7 +45,8 @@
     font-size: 32px;
     letter-spacing: 0.05em;
   }
-  .header-icon {
+
+  .icon-header {
     display: none;
   }
   .nav-link-header {
@@ -48,6 +55,7 @@
     justify-content: flex-start;
     flex-direction: row;
     gap: 40px;
+    white-space: nowrap;
   }
   .link-header {
     font-family: 'Poppins', sans-serif;
@@ -57,11 +65,14 @@
     letter-spacing: 0.03em;
     color: #292929;
   }
+  .link-header:hover,
+  .link-header:focus {
+    color: #00b068;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .navigation-header {
-    gap: 437px;
     padding: 36px 0;
   }
 }
