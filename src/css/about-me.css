@@ -11,9 +11,6 @@
     margin-bottom: 40px;
 }
 
-.about-me-container {
-    padding: 0 20px;
-}
 
 .about-me-subtitle {
     font-family: "Poppins", sans-serif;
@@ -54,24 +51,6 @@
     gap: 12px;
     flex-direction: column;
     margin-left: 32px;
-
-}
-
-.about-me-ul li {
-    position: relative;
-
-}
-
-.about-me-ul li::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%224%22%20height%3D%224%22%20rx%3D%221%22%20transform%3D%22matrix(-1%208.74228e-08%208.74228e-08%201%2014%2010)%22%20fill%3D%22%2300B068%22/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .about-me-edu-and-role {
@@ -79,7 +58,16 @@
     flex-direction: column;
     gap: 40px;
 }
+.about-me-ul li {
+    position: relative;
 
+}
+.about-me-svg {
+    position: absolute;
+    left: -32px;
+    top: 0;
+    
+}
 @media only screen and (min-width: 768px) {
     .about-me-title {
         font-size: 108px;
