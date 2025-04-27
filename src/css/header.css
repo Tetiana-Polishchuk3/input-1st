@@ -73,10 +73,6 @@
 
 @media screen and (min-width: 1280px) {
   .navigation-header {
-    gap: 437px;
     padding: 36px 0;
   }
 }
-/*.nav-link-header {
-  white-space: wrap;
-}*/
