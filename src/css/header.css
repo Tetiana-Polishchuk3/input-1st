@@ -21,14 +21,6 @@
 .nav-logo-header span {
   color: #00b068;
 }
-.menu-toggle {
-  display: flex;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: #292929;
-  fill: #292929;
-}
 
 @media screen and (min-width: 768px) {
   .navigation-header {
