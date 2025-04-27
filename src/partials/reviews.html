@@ -2,14 +2,22 @@
   <h2 class="reviews-title">REVIEWS</h2>
   <div class="reviews-wrapper">
     <div class="swiper reviews-swiper">
-      <ul class="swiper-wrapper"></ul>
-
-      <div class="reviews-navigation">
-        <button class="swiper-button-prev" aria-label="Previous slide"></button>
-        <button class="swiper-button-next" aria-label="Next slide"></button>
+      <ul class="swiper-wrapper">
+        <!-- Динамічно вставляються слайди -->
+      </ul>
+    </div>
+    <div class="reviews-navigation">
+      <div class="swiper-button-prev">
+        <svg class="button-svg" aria-label="">
+          <use href="./img/sprite.svg#icon-arrow"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg class="button-svg button-rotate" aria-label="">
+          <use href="./img/sprite.svg#icon-arrow"></use>
+        </svg>
       </div>
     </div>
-
     <div class="fallback-text" hidden>Not found</div>
   </div>
 </section>
