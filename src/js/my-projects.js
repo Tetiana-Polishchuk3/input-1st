@@ -4,20 +4,36 @@ document.addEventListener('DOMContentLoaded', function () {
   const initialPhotosCount = projectsGrid.children.length;
   let loadedPhotosCount = 0;
 
+  // Determine if we're on GitHub Pages
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const basePath = isGitHubPages ? '/input-1st' : '';
+
   const newPhotosData = [
     {
-      url: '/img/my-project/img_4@x2.jpg',
+      url: `${basePath}/img/my-project/img_4@x2.jpg`,
       alt: 'STARLIGHT STUDIO LANDING PAGE',
     },
-    { url: '/img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
-    { url: '/img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
-    { url: '/img/my-project/img_7@x2.jpg', alt: 'CHEGO JEWELRY WEBSITE' },
-    { url: '/img/my-project/img_8@x2.jpg', alt: 'MIMINO WEBSITE' },
     {
-      url: '/img/my-project/img_9@x2.jpg',
+      url: `${basePath}/img/my-project/img_5@x2.jpg`,
+      alt: 'ENERGY FLOW WEBSERVICE',
+    },
+    {
+      url: `${basePath}/img/my-project/img_6@x2.jpg`,
+      alt: 'FRUITBOX ONLINE STORE',
+    },
+    {
+      url: `${basePath}/img/my-project/img_7@x2.jpg`,
+      alt: 'CHEGO JEWELRY WEBSITE',
+    },
+    { url: `${basePath}/img/my-project/img_8@x2.jpg`, alt: 'MIMINO WEBSITE' },
+    {
+      url: `${basePath}/img/my-project/img_9@x2.jpg`,
       alt: 'VYSHYVANKA VIBES LANDING PAGE',
     },
-    { url: '/img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
+    {
+      url: `${basePath}/img/my-project/img_10@x2.jpg`,
+      alt: 'POWER PULSE WEBSERVICE',
+    },
   ];
 
   if (loadMoreButton) {
