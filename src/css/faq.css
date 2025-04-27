@@ -1,6 +1,19 @@
 .faq-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-section {
+    padding-top: 124px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .faq-section {
+    padding-top: 164px;
+    padding-bottom: 0;
+  }
 }
 
 .faq-question {
@@ -12,6 +25,14 @@
   text-transform: uppercase;
   color: #292929;
 }
+
+@media screen and (min-width: 768px) {
+  .faq-question {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
 .faq-title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
@@ -20,38 +41,31 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #292929;
+  max-width: 320px;
 }
 @media screen and (min-width: 768px) {
   .faq-title {
     font-size: 108px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    max-width: 592px;
   }
 }
-@media screen and (min-width: 768px) {
-  .faq-question {
-    font-size: 20px;
-    line-height: 1.6;
+
+@media screen and (min-width: 1280px) {
+  .faq-title {
+    max-width: 520px;
   }
 }
+
 .faq-answer-text {
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 300;
   letter-spacing: 0.03em;
   color: #292929;
 }
-@media screen and (min-width: 768px) {
-  .faq-section {
-    padding-top: 124px;
-    padding-bottom: 62px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .faq-section {
-    padding-top: 164px;
-    padding-bottom: 82px;
-  }
-}
+
 .faq-wrapper {
   display: flex;
   flex-direction: column;
@@ -60,7 +74,7 @@
 @media screen and (min-width: 1280px) {
   .faq-wrapper {
     flex-direction: row;
-    gap: 60px;
+    gap: 104px;
   }
 }
 .faq-title-wrapper {
@@ -93,7 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 20px; */
+  gap: 16px;
   width: 100%;
   background: none;
   border: none;
@@ -101,6 +115,13 @@
   margin-bottom: 24px;
   padding: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .accordion-header {
+    gap: 24px;
+  }
+}
+
 .accordion-button {
   background: none;
   border: none;
@@ -117,6 +138,7 @@
 .faq-icon {
   width: 24px;
   height: 24px;
+  fill: none;
   stroke: #292929;
   stroke-width: 2;
   position: absolute;
@@ -176,26 +198,47 @@
 
 .accordion-header {
   position: relative;
-  padding-right: 30px; /* место для стрелки */
+  /* padding-right: 30px; место для стрелки */
   cursor: pointer;
 }
 
 /* Стрелка вниз по умолчанию */
-.accordion-header::after {
+/* .accordion-header::after {
   content: '▼';
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   transition: transform 2.4s ease;
-}
+} */
 
 /* Когда активен — стрелка вверх */
-.accordion-item.active .accordion-header::after {
+/* .accordion-item.active .accordion-header::after {
   content: '▲';
-}
+} */
 
 /* Фон активного вопроса и ответа */
 .accordion-item.active {
   background-color: #bcdfd1;
+}
+
+.image-faq {
+  display: none; /* по умолчанию скрываем на всех устройствах */
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1280px) {
+  .image-faq {
+    display: block; /* только на экранах шире 1024px показываем */
+    margin-top: 240px;
+    width: 526px; /* например, фиксированная ширина */
+    height: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .faq-accordion-wrapper {
+    margin-top: 276px; /* На десктопах ещё больше отступ */
+  }
 }
