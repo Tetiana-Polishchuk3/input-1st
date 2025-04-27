@@ -1,23 +1,13 @@
 /* Секція Benefits */
 .benefits-section {
-
-  max-width: 1280px;
-  margin: 80px auto 32px;
-  padding: 0 32px;
-  min-height: 500px; /* додав мінімальну висоту */
-  background-image: image-set(
-    url('./img/benefits/benefits-bg@1x.png') 1x,
-    url('./img/benefits/benefits-bg@2x.png') 2x
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
+  max-width: 1200px;
+  margin: 80px auto 0px; 
+  padding: 0 20px;
+  gap: 40px;
+  }
 /* Заголовок */
 .benefits-title {
-  width: 320px;
+  min-width: 320px;
   height: 192px;
   font-family: Impact;
   font-weight: 400;
@@ -67,17 +57,16 @@
   margin-bottom: 16px;
  }
 .benefits-icon-expertise {
-  background-image: url('/src/img/benefits/Expertise.svg');
+  background-image: url('../img/benefits/Expertise.svg');
 }
 .benefits-icon-communication {
-  background-image: url('/src/img/benefits/Communication.svg'); 
+  background-image: url('../img/benefits/Communication.svg'); 
 }
 .benefits-icon-art {
-  background-image: url('/src/img/benefits/Art.svg');  
+  background-image: url('../img/benefits/Art.svg');
 }
 .benefits-icon-urgent {
-  background-image: url('/src/img/benefits/Urgent.svg');  
-
+  background-image: url('../img/benefits/Urgent.svg');  
 }
 .benefits-item-title {
   height: 28px;
@@ -99,31 +88,48 @@
 }
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
-  .benefits-title {
-    width: 704px;
-    height: 372px;
-    font-size: 108px;
-    line-height: 124px;
-    letter-spacing: 1.8px;
-  }
-  .benefits-item-title {
-    width: 336px;
-    height: 32px;
-    font-size: 20px;
-    line-height: 32px;
+.benefits-section {
+  margin: 124px auto 0px; 
+  gap: 10px;
+   }
+.benefits-title {
+  width: 681px;
+  height: 372px;
+  font-size: 108px;
+  line-height: 124px;
+  letter-spacing: 1.8px;
+  margin-bottom: 0px;
   }
 
-  .benefits-list {
+.benefits-list {
+    height: 400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     gap: 32px;
+    margin-top: -96px;
+  }
+.benefits-item {
+  height: 184px;
+  border-radius: 16px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.benefits-item-art {
+   height: 180px;
+}
+.benefits-item-title {
+  height: 32px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
   }
 
-  .expertise {
+ .expertise {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    margin-top: -30px;
   }
 
   .benefits-item:nth-child(2) {
@@ -144,31 +150,43 @@
 
 /* ======= DESKTOP ======= */
 @media (min-width: 1280px) {
-  .benefits-title {
-
-  width: 681px;
-  height: 372px;
-  left: 32px;
-  background-image: image-set(
-    url('/src/img/benefits/benefits-bg@1x.png') 1x,
-    url('/src/img/benefits/benefits-bg@2x.png') 2x
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
+.benefits-section {
+  margin: 164px auto 0px; 
+  padding: 0 32px;
+  gap: 10px;
+  position: relative; 
+  overflow: visible;  
   }
-  .benefits-list {
+
+.benefits-decor {
+  position: absolute;
+  top: -96px;
+  left: 0;
+  right: 0;
+  height: 408px;
+  background-image: image-set(
+    url('../img/benefits/benefits-bg@1x.png') 1x,
+    url('../img/benefits/benefits-bg@2x.png') 2x
+  );
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: top right;
+    z-index: -1;
+    display: block;
+}
+  
+.benefits-list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
   }
 
-  .expertise {
+.expertise {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    margin-top: -30px;
   }
-
-  .benefits-item:nth-child(2) {
+  
+.benefits-item:nth-child(2) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
