@@ -378,7 +378,7 @@
   .faq-accordion-wrapper {
     margin-top: 276px; /* На десктопах ещё больше отступ */
   }
-
+}
 .faq-title span {
   color: var(--span-text-color);
 }
