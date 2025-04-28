@@ -245,9 +245,7 @@
 
 @media screen and (min-width: 1280px) {
   .header-container {
-    padding: 0 16px;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 0 32px;
   }
 
   .navigation-header {
