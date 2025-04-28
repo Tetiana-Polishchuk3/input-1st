@@ -3,11 +3,11 @@
   font-size: 52px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1.8px;
-  line-height: 1.6;
+  letter-spacing: 0.03em;
+  line-height: 63.96px;
   text-transform: uppercase;
-  color: var(--main-text-color);
+  color: var (--main-text-color);
+  margin-bottom: 40px;
 }
 
 .reviews-wrapper {
@@ -16,13 +16,13 @@
 
 .review-author {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
-  /* margin-top: 24px; */
 }
 .author-avatar {
   width: 40px;
-  border-radius: 50px;
+  height: 40px;
+  border-radius: 24px;
 }
 
 .swiper-wrapper .swiper-slide {
@@ -36,18 +36,22 @@
   max-height: 296px;
   height: 100%;
   max-width: 320px;
-  /* overflow: hidden;
-  text-overflow: ellipsis; */
-  /* flex-shrink: 0; */
+  letter-spacing: 0.03em;
 }
 
 .review-text {
-  /* ??? */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  /* height: 168px; */
-  /* margin-bottom: 24px;
-  padding: 32px; */
+  letter-spacing: 0.03em;
+}
+
+.review-author-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
 .reviews-wrapper .reviews-swiper {
@@ -57,29 +61,29 @@
 
 .reviews-navigation {
   display: flex;
-  gap: 24px; /* 24px відстань між кнопками */
+  gap: 16px;
   position: absolute;
-  right: 34px;
+  right: 50px;
   bottom: -40px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background-color: var(--main-background-color);
+.reviews-navigation .swiper-button-prev,
+.reviews-navigation .swiper-button-next {
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s, opacity 0.3s;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border: 1px solid var(--main-text-color);
 }
 
-/* При наведенні */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: var(--hover-background-color);
+  background-color: #e4e5e6;
 }
 
 /* Прибрати дефолтні стрілки Swiper */
@@ -91,15 +95,13 @@
 .reviews-navigation .button-svg {
   fill: none;
   stroke: var(--main-text-color);
-  width: 44px;
-  height: 44px;
 }
+
 .button-rotate {
   transform: rotate(180deg);
 }
 
 .fallback-text {
-  /* ??? */
   text-align: center;
   font-size: 24px;
   padding: 40px;
@@ -108,7 +110,9 @@
 
 @media only screen and (min-width: 768px) {
   .reviews-title {
+    letter-spacing: 0.02em;
     font-size: 108px;
+    line-height: 124.2px;
     margin-bottom: 60px;
   }
 
@@ -121,5 +125,19 @@
 @media only screen and (min-width: 1280px) {
   .reviews-title {
     margin-bottom: 80px;
+  }
+
+  .reviews-navigation .swiper-button-prev,
+  .reviews-navigation .swiper-button-next {
+    width: 48px;
+    height: 48px;
+  }
+
+  .reviews-navigation {
+    gap: 24px;
+  }
+
+  .reviews-navigation {
+    right: 56px;
   }
 }
