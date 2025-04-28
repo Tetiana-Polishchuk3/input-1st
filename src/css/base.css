@@ -5,6 +5,30 @@
   font-style: normal;
 }
 
+body.light {
+  --main-text-color: #292929;
+  --span-text-color: #00b068;
+  --main-background-color: #f0f0f0;
+  --accent-background-color: #ffffff;
+  --background-color: #f9f9f9;
+  --hover-green: #00b068;
+  --icon-color: #292929;
+  --border-color: #e0e0e0;
+  --overlay-background: rgba(0, 0, 0, 0.4);
+}
+
+body.dark {
+  --main-text-color: #f0f0f0;
+  --span-text-color: #14c57c;
+  --main-background-color: #1e2023;
+  --accent-background-color: #204136;
+  --background-color: #2a2d32;
+  --hover-green: #009156;
+  --icon-color: #f0f0f0;
+  --border-color: #3a3a3a;
+  --overlay-background: rgba(0, 0, 0, 0.4);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -13,12 +37,33 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
-  background: #f0f0f0;
+  background: var(--main-background-color);
+  color: var(--main-text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Header styles */
+.nav-logo-header {
+  color: var(--main-text-color);
+}
+
+.nav-logo-header span {
+  color: var(--span-text-color);
+}
+
+.link-header {
+  color: var(--main-text-color);
+}
+
+.link-header:hover,
+.link-header:focus {
+  color: var(--hover-green);
 }
 
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
