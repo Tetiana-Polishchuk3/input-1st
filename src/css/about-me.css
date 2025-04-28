@@ -1,138 +1,135 @@
 .about-me-title {
-    font-family: "Impact", sans-serif;
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23077;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #292929;
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
 
-    margin-top: 80px;
-    margin-bottom: 40px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
-
 .about-me-subtitle {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 1.25;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #292929;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .about-me-text {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    color: #292929;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
 
 .about-me-image {
-    border-radius: 16px;
-    margin-bottom: 40px;
-    width: 100%;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .about-me-bio {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .about-me-ul {
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
-    margin-left: 32px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  margin-left: 32px;
 }
 
 .about-me-edu-and-role {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .about-me-ul li {
-    position: relative;
-
+  position: relative;
 }
 .about-me-svg {
-    position: absolute;
-    left: -32px;
-    top: 0;
-    
+  position: absolute;
+  left: -32px;
+  top: 0;
 }
 @media only screen and (min-width: 768px) {
-    .about-me-title {
-        font-size: 108px;
-        line-height: 1.14815;
-        letter-spacing: 0.02em;
-    }
-    .about-me-container {
-        padding: 0 32px;
-    }
-    .about-me-edu-and-role {
-        flex-direction: row;
-        gap: 32px;
-        
-    }
-    .about-me-content {
-        position: relative;
-        padding-top: 820px;
-        background-image: image-set(
-            url('../img/about-me/about-me-background-tablet-@1x.png') 1x,
-            url('../img/about-me/about-me-background-tablet-@2x.png') 2x);
-        background-repeat: no-repeat;
-        background-position: right 0px top 692px;
-        background-size: auto;
-        
-    }
-    .about-me-bio-text {
-        position: absolute;
-        width: 336px;
-        right: 0;
-        top: 0;
-    }
-    .about-me-picture {
-        position: absolute;
-        top: 378px;
-    }
-    .about-me-education, .about-me-role {
-        width: calc((100% - 32px) / 2)
-    }
+  .about-me-title {
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+  }
+  .about-me-container {
+    padding: 0 32px;
+  }
+  .about-me-edu-and-role {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .about-me-content {
+    position: relative;
+    padding-top: 820px;
+    background-image: image-set(
+      url('../img/about-me/about-me-background-tablet-@1x.png') 1x,
+      url('../img/about-me/about-me-background-tablet-@2x.png') 2x
+    );
+    background-repeat: no-repeat;
+    background-position: right 0px top 692px;
+    background-size: auto;
+  }
+  .about-me-bio-text {
+    position: absolute;
+    width: 336px;
+    right: 0;
+    top: 0;
+  }
+  .about-me-picture {
+    position: absolute;
+    top: 378px;
+  }
+  .about-me-education,
+  .about-me-role {
+    width: calc((100% - 32px) / 2);
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-    .about-me-content {
-        position: relative;
-        padding-top: 800px;
-        max-width: 1216px;
-        margin: 0 auto;
-        background-image: image-set(
-            url('../img/about-me/about-me-background-desktop-@1x.png') 1x,
-            url('../img/about-me/about-me-background-desktop-@2x.png') 2x
-            );
-        background-position: right 0px top 528px;
-    }
-    .about-me-bio-text {
-        width: 488px;
-    }
-    .about-me-edu-and-role {
-        gap: 136px;
-        margin-left: 208px;       
-    }
-    .about-me-picture {
-        top: 272px;
-        left: 208px;
-    }
-    .about-me-education,
-    .about-me-role {
-            width: 384px;
-        }
+  .about-me-content {
+    position: relative;
+    padding-top: 800px;
+    max-width: 1216px;
+    margin: 0 auto;
+    background-image: image-set(
+      url('../img/about-me/about-me-background-desktop-@1x.png') 1x,
+      url('../img/about-me/about-me-background-desktop-@2x.png') 2x
+    );
+    background-position: right 0px top 528px;
+  }
+  .about-me-bio-text {
+    width: 488px;
+  }
+  .about-me-edu-and-role {
+    gap: 136px;
+    margin-left: 208px;
+  }
+  .about-me-picture {
+    top: 272px;
+    left: 208px;
+  }
+  .about-me-education,
+  .about-me-role {
+    width: 384px;
+  }
 }

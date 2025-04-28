@@ -7,7 +7,7 @@
   letter-spacing: 1.8px;
   line-height: 1.6;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
 }
 
 .reviews-wrapper {
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #e4e5e6;
+  background-color: var(--accent-background-color);
   border-radius: 16px;
   padding: 32px;
   min-height: 296px;
@@ -68,19 +68,18 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  /* background-color: #fff;
-  border: 1px solid #d1d5db; */
+  background-color: var(--main-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /* transition: background-color 0.3s, opacity 0.3s; */
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
 /* При наведенні */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #f3f4f6;
+  background-color: var(--hover-background-color);
 }
 
 /* Прибрати дефолтні стрілки Swiper */
@@ -91,7 +90,7 @@
 
 .reviews-navigation .button-svg {
   fill: none;
-  stroke: #292929;
+  stroke: var(--main-text-color);
   width: 44px;
   height: 44px;
 }
@@ -104,7 +103,7 @@
   text-align: center;
   font-size: 24px;
   padding: 40px;
-  color: #777;
+  color: var(--secondary-text-color);
 }
 
 @media only screen and (min-width: 768px) {

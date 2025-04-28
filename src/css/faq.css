@@ -9,7 +9,7 @@
   line-height: 1.55;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
 }
 .faq-title {
   font-family: 'Impact', sans-serif;
@@ -18,7 +18,7 @@
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
 }
 @media screen and (min-width: 768px) {
   .faq-title {
@@ -37,7 +37,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--main-text-color);
 }
 @media screen and (min-width: 768px) {
   .faq-section {
@@ -76,7 +76,7 @@
 }
 .accordion-item {
   border-radius: 16px;
-  border-bottom: 1px solid #e4e5e6;
+  border-bottom: 1px solid var(--border-color);
   padding: 28px 26px;
 }
 
@@ -87,12 +87,11 @@
   line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 20px; */
   width: 100%;
   background: none;
   border: none;
@@ -116,7 +115,7 @@
 .faq-icon {
   width: 24px;
   height: 24px;
-  stroke: #292929;
+  stroke: var(--main-text-color);
   stroke-width: 2;
   position: absolute;
   top: 0;
@@ -141,7 +140,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--main-text-color);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, margin-top 0.3s ease;
@@ -156,7 +155,7 @@
   line-height: 123%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
   margin: 0;
   margin-bottom: 40px;
 }
@@ -170,16 +169,15 @@
   }
 }
 .faq-title span {
-  color: #00b068;
+  color: var(--span-text-color);
 }
 
 .accordion-header {
   position: relative;
-  padding-right: 30px; /* место для стрелки */
+  padding-right: 30px;
   cursor: pointer;
 }
 
-/* Стрелка вниз по умолчанию */
 .accordion-header::after {
   content: '▼';
   position: absolute;
@@ -187,14 +185,13 @@
   top: 50%;
   transform: translateY(-50%);
   transition: transform 2.4s ease;
+  color: var(--main-text-color);
 }
 
-/* Когда активен — стрелка вверх */
 .accordion-item.active .accordion-header::after {
   content: '▲';
 }
 
-/* Фон активного вопроса и ответа */
 .accordion-item.active {
-  background-color: #bcdfd1;
+  background-color: var(--light-green);
 }
