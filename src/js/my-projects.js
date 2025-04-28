@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Масив з даними про нові фотографії (URL та підпис)
     const newPhotosData = [
-  { url: './img/my-project/img_4@x2.jpg', alt: 'STARLIGHT STUDIO LANDING PAGE' },
-  { url: './img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
-  { url: './img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
+  { url: '/src/img/my-project/img_4@x2.jpg', alt: 'STARLIGHT STUDIO LANDING PAGE' },
+  { url: '/src/img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
+  { url: '/src/img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
   { url: './img/my-project/img_7@x2.jpg', alt: 'CHEGO JEWELRY WEBSITE' },
   { url: './img/my-project/img_8@x2.jpg', alt: 'MIMINO WEBSITE' },
-  { url: './img/my-project/img_9@x2.jpg', alt: 'VYSHYVANKA VIBES LANDING PAGE' },
-  { url: './img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
+  { url: '../img/my-project/img_9@x2.jpg', alt: 'VYSHYVANKA VIBES LANDING PAGE' },
+  { url: '../img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
 ];
 
     if (loadMoreButton) {
@@ -48,15 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadMoreButton.style.display = 'none';
                 }
             }
-
         });
-
-        loadedPhotosCount += photosToLoad.length;
-
-        if (loadedPhotosCount >= newPhotosData.length) {
-          loadMoreButton.style.display = 'none';
-        }
-      }
-   
-
+    }
 });
