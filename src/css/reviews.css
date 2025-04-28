@@ -6,7 +6,7 @@
   letter-spacing: 0.03em;
   line-height: 63.96px;
   text-transform: uppercase;
-  color: #292929;
+  color: var (--main-text-color);
   margin-bottom: 40px;
 }
 
@@ -70,10 +70,6 @@
 .reviews-navigation .swiper-button-prev,
 .reviews-navigation .swiper-button-next {
   border-radius: 8px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +78,7 @@
   width: 40px;
   height: 40px;
   padding: 12px;
-  border: 1px solid var(#292929);
+  border: 1px solid var(--main-text-color);
 }
 
 .swiper-button-prev:hover,
@@ -98,7 +94,7 @@
 
 .reviews-navigation .button-svg {
   fill: none;
-  stroke: #292929;
+  stroke: var(--main-text-color);
 }
 
 .button-rotate {
