@@ -1,3 +1,4 @@
+ my-projects.js-remake
 document.addEventListener('DOMContentLoaded', function() {
     const loadMoreButton = document.querySelector('.load-more-button');
     const projectsGrid = document.querySelector('.projects-grid');
@@ -48,6 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadMoreButton.style.display = 'none';
                 }
             }
+
         });
-    }
+
+        loadedPhotosCount += photosToLoad.length;
+
+        if (loadedPhotosCount >= newPhotosData.length) {
+          loadMoreButton.style.display = 'none';
+        }
+      }
+    });
+  }
 });
