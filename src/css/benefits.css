@@ -68,13 +68,14 @@
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
   .benefits-section {
-    margin: 124px 0;
+    margin: 44px 0 124px;
   }
   .benefits-title {
     font-size: 108px;
     line-height: 1.14815;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   .benefits-list {
@@ -120,15 +121,15 @@
 
 @media (min-width: 1280px) {
   .benefits-section {
-    margin: 56px 0 164px;
-    position: relative;
-    overflow: visible;
+    margin: 44px 0 164px;
+    
   }
 .benefits-title {
-  width: 681px;
+  width: 686px;
 }
 .benefits-container {
   height: 676px;
+  position: relative;
   
   }
 .benefits-item {
