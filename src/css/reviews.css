@@ -36,18 +36,26 @@
   max-height: 296px;
   height: 100%;
   max-width: 320px;
+  letter-spacing: 0.03em;
+  /* line-height: 0.03em; */
   /* overflow: hidden;
   text-overflow: ellipsis; */
   /* flex-shrink: 0; */
 }
 
 .review-text {
-  /* ??? */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  /* height: 168px; */
-  /* margin-bottom: 24px;
-  padding: 32px; */
+  letter-spacing: 0.03em;
+}
+
+.review-author-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
 .reviews-wrapper .reviews-swiper {
@@ -57,30 +65,28 @@
 
 .reviews-navigation {
   display: flex;
-  gap: 24px; /* 24px відстань між кнопками */
+  gap: 16px;
   position: absolute;
-  right: 34px;
+  right: 48px;
   bottom: -40px;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  /* background-color: #fff;
-  border: 1px solid #d1d5db; */
+.reviews-navigation .swiper-button-prev,
+.reviews-navigation .swiper-button-next {
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /* transition: background-color 0.3s, opacity 0.3s; */
+  transition: background-color 0.3s, opacity 0.3s;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border: 1px solid var(#292929);
 }
 
-/* При наведенні */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #f3f4f6;
+  background-color: #e4e5e6;
 }
 
 /* Прибрати дефолтні стрілки Swiper */
@@ -90,17 +96,16 @@
 }
 
 .reviews-navigation .button-svg {
+  /* display: block; */
   fill: none;
   stroke: #292929;
-  width: 44px;
-  height: 44px;
 }
+
 .button-rotate {
   transform: rotate(180deg);
 }
 
 .fallback-text {
-  /* ??? */
   text-align: center;
   font-size: 24px;
   padding: 40px;
@@ -122,5 +127,15 @@
 @media only screen and (min-width: 1280px) {
   .reviews-title {
     margin-bottom: 80px;
+  }
+
+  .reviews-navigation .swiper-button-prev,
+  .reviews-navigation .swiper-button-next {
+    width: 48px;
+    height: 48px;
+  }
+
+  .reviews-navigation {
+    gap: 24px;
   }
 }
