@@ -28,7 +28,7 @@
   background-color: var(--light-green);
 }
 .second-line {
-  background-color: var(--background-color);
+  background-color: var(--accent-background-color);
   transform: rotate(2deg);
 }
 .running-ts-inner {

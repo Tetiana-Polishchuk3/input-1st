@@ -131,14 +131,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header-container {
-    padding: 0 32px;
-  }
-
-  .navigation-header {
-    padding: 32px 0;
-  }
-
   .nav-logo-header {
     font-size: 32px;
     letter-spacing: 0.05em;

@@ -1,3 +1,7 @@
+.faq-section {
+  padding-bottom: 80px;
+}
+
 .faq-wrapper {
   display: flex;
   flex-direction: column;
@@ -51,6 +55,9 @@
 @media screen and (min-width: 768px) {
   .accordion-header {
     gap: 24px;
+  }
+  .faq-section {
+    padding-bottom: 124px;
   }
 }
 
@@ -108,15 +115,26 @@
   margin-top: 20px;
 }
 .faq-title {
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
-  font-size: 52px;
-  line-height: 123%;
-  letter-spacing: 0.03em;
+  font-size: 108px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--main-text-color);
   margin: 0;
   margin-bottom: 40px;
 }
+
+.faq-question {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
 @media screen and (min-width: 768px) {
   .faq-title {
     font-size: 108px;
@@ -164,5 +182,5 @@
 }
 
 .accordion-item.active {
-  background-color: var(--accent-background-color);
+  background-color: var(--light-green);
 }
