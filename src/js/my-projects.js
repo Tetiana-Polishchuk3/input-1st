@@ -58,6 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
           loadMoreButton.style.display = 'none';
         }
       }
-    });
+   
 
 });
