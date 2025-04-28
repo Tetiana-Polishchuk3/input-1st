@@ -48,15 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadMoreButton.style.display = 'none';
                 }
             }
-
         });
-
-        loadedPhotosCount += photosToLoad.length;
-
-        if (loadedPhotosCount >= newPhotosData.length) {
-          loadMoreButton.style.display = 'none';
-        }
-      }
-   
-
+    }
 });
