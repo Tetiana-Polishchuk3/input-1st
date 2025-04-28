@@ -36,7 +36,7 @@
 
 .project-card {
   overflow: hidden;
-  display: flex;
+  display: flex; /* Або block, залежно від  поточної розмітки */
   flex-direction: column;
 }
 
@@ -51,7 +51,7 @@
 
 .project-technologies {
   padding-top: 16px;
-  padding-bottom: 20px;
+
   margin: 0;
 
   font-family: 'Poppins', sans-serif;
@@ -67,6 +67,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
 }
 
 .project-title {
@@ -114,8 +115,7 @@
 }
 
 .project-visit-button:hover {
-  background-color: var(--hover-green);
-  color: var(--main-background-color);
+  background-color: #bbbbbb;
 
   svg {
     fill: var(--main-background-color);
