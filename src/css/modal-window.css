@@ -19,6 +19,13 @@
   visibility: hidden;
   pointer-events: none;
 }
+.iconClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+}
 
 body.modal-open {
   overflow: hidden;
@@ -30,9 +37,9 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--main-background-color);
     width: 320px;
-    border: 1px solid #fff;
+    border: 1px solid var(--main-background-color);
     border-radius: 16px;
     transform: scale(1);
     transition: transform 0.3s ease;
@@ -44,8 +51,8 @@ body.modal-open {
 
   .iconClose {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     width: 24px;
     height: 24px;
     outline: none;
@@ -58,14 +65,14 @@ body.modal-open {
   .modalTitle {
     font-weight: 400;
     font-size: 20px;
-    color: #00b068;
+    color: var(--span-text-color);
     letter-spacing: 0.5;
   }
 
   .modalText {
     font-weight: 300;
     font-size: 16px;
-    color: #292929;
+    color: var(--main-text-color);
     /* width: 364px; */
     text-align: justify;
   }
@@ -80,7 +87,7 @@ body.modal-open {
 
     width: 492px;
     height: 280px;
-    border: 1px solid #fff;
+    border: 1px solid var(--main-background-color);
     border-radius: 16px;
   }
 
@@ -99,13 +106,13 @@ body.modal-open {
   .modalTitle {
     font-weight: 400;
     font-size: 20px;
-    color: #00b068;
+    color: var(--span-text-color);
   }
 
   .modalText {
     font-weight: 300;
     font-size: 16px;
-    color: #292929;
+    color: var(--main-text-color);
     width: 364px;
     text-align: justify;
   }

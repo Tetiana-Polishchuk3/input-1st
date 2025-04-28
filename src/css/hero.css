@@ -11,13 +11,13 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
   width: 100%;
   margin-top: 96px;
   margin-bottom: 40px;
 }
 .title-hero span {
-  color: #00b068;
+  color: var(--span-text-color);
 }
 .button-hero {
   display: inline-flex;
@@ -31,7 +31,7 @@
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
   height: 92px;
   width: 320px;
   margin-bottom: 40px;
@@ -48,8 +48,8 @@
   width: 2em;
   height: 1em;
   stroke-width: 0;
-  fill: #00b068;
-  stroke: #00b068;
+  fill: var(--span-text-color);
+  stroke: var(--span-text-color);
 }
 
 .bg-part {
@@ -65,7 +65,7 @@
 }
 .bg-part:hover,
 .bg-part:focus {
-  background-color: #00b068;
+  background-color: var(--hover-green);
 }
 
 .image-hero {
@@ -78,13 +78,13 @@
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
 }
 .text-hero-style {
-  color: #00b068;
+  color: var(--span-text-color);
 }
 .contacts-hero {
-  background-color: #e4e5e6;
+  background-color: var(--accent-background-color);
   margin-top: 56px;
   padding: 32px 0;
 }
@@ -97,7 +97,7 @@
 }
 .hero-list-item:hover,
 .hero-list-item:focus {
-  color: #00b068;
+  color: var(--hover-green);
 }
 @media screen and (max-width: 768px) and (min-resolution: 192dpi) {
   .hero {
@@ -174,6 +174,7 @@
   .image-hero {
     display: block;
     margin-bottom: 80px;
+    border-radius: 32px;
   }
 
   .hero-text {

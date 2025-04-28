@@ -1,82 +1,80 @@
 .tech-skills {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 #ts {
-    max-width: 100%;
-    padding: 0;
+  max-width: 100%;
+  padding: 0;
 }
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .running-ts {
-    overflow: hidden;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1.25;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    background-color: #bcdfd1;
-    
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background-color: var(--light-green);
 }
 .second-line {
-    background-color: #e4e5e6;
-    transform: rotate(2deg);
-    
+  background-color: var(--accent-background-color);
+  transform: rotate(2deg);
 }
 .running-ts-inner {
-    display: flex;
+  display: flex;
 }
 .green {
-    color: #00b068;
+  color: var(--span-text-color);
 }
 .running-ts-line {
-    flex-shrink: 0;
-    margin: 0;
-    padding: 32px 8px;
-    min-width: 100%;
-    white-space: nowrap;
-    animation-name: techSkillsLine;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 32px 8px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: techSkillsLine;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .opposite {
-    animation-name: techSkillsLineOpposite;
+  animation-name: techSkillsLineOpposite;
 }
 @keyframes techSkillsLine {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(-100%);
-    }
+  to {
+    transform: translateX(-100%);
+  }
 }
 @keyframes techSkillsLineOpposite {
-    from {
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(-100%);
+  }
 
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
+  }
 }
 @media only screen and (min-width: 768px) {
-    .running-ts {
-        line-height: 1.33333;
-        letter-spacing: 0.01em;
-    }
-    .running-ts-line {
-        padding: 40px 8px;
-    }
+  .running-ts {
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+  .running-ts-line {
+    padding: 40px 8px;
+  }
 }

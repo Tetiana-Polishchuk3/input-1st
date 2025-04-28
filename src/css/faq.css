@@ -2,16 +2,55 @@
   padding-top: 80px;
   padding-bottom: 0;
 }
-
+.faq-question {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+.faq-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+@media screen and (min-width: 768px) {
+  .faq-title {
+    font-size: 108px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .faq-question {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+.faq-answer-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
 @media screen and (min-width: 768px) {
   .faq-section {
     padding-top: 124px;
+
     padding-bottom: 0;
+
   }
 }
 @media screen and (min-width: 1280px) {
   .faq-section {
     padding-top: 164px;
+
     padding-bottom: 0;
   }
 }
@@ -30,9 +69,107 @@
   .faq-question {
     font-size: 20px;
     line-height: 1.6;
+
   }
 }
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .faq-wrapper {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+.faq-title-wrapper {
+  flex: 1;
+}
+.faq-accordion-wrapper {
+  flex: 1;
+}
+.accordion {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.accordion-item {
+  border-radius: 16px;
+  border-bottom: 1px solid var(--border-color);
+  padding: 28px 26px;
+}
 
+.accordion-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  margin-bottom: 24px;
+  padding: 0;
+}
+.accordion-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--main-text-color);
+  stroke-width: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.faq-icon-down {
+  opacity: 1;
+}
+.faq-icon-up {
+  opacity: 0;
+}
+.accordion-item.active .faq-icon-down {
+  opacity: 0;
+}
+.accordion-item.active .faq-icon-up {
+  opacity: 1;
+}
+.accordion-content {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  margin-top: 20px;
+}
 .faq-title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
@@ -40,8 +177,11 @@
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
-  max-width: 320px;
+
+  color: var(--main-text-color);
+  margin: 0;
+  margin-bottom: 40px;
+
 }
 @media screen and (min-width: 768px) {
   .faq-title {
@@ -51,6 +191,7 @@
     max-width: 592px;
   }
 }
+
 
 @media screen and (min-width: 1280px) {
   .faq-title {
@@ -192,9 +333,7 @@
     margin-bottom: 60px;
   }
 }
-.faq-title span {
-  color: #00b068;
-}
+
 
 .accordion-header {
   position: relative;
@@ -218,9 +357,7 @@
 } */
 
 /* Фон активного вопроса и ответа */
-.accordion-item.active {
-  background-color: #bcdfd1;
-}
+
 
 .image-faq {
   display: none; /* по умолчанию скрываем на всех устройствах */
@@ -241,4 +378,32 @@
   .faq-accordion-wrapper {
     margin-top: 276px; /* На десктопах ещё больше отступ */
   }
+
+.faq-title span {
+  color: var(--span-text-color);
+}
+
+.accordion-header {
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+/* .accordion-header::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 2.4s ease;
+  color: var(--main-text-color);
+}
+
+.accordion-item.active .accordion-header::after {
+  content: '▲';
+} */
+
+.accordion-item.active {
+  background-color: var(--light-green);
+
 }
