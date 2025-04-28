@@ -116,10 +116,6 @@
 
 .project-visit-button:hover {
   background-color: #bbbbbb;
-
-  svg {
-    fill: var(--main-background-color);
-  }
 }
 
 .load-more-button {
