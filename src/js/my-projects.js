@@ -1,4 +1,3 @@
- my-projects.js-remake
 document.addEventListener('DOMContentLoaded', function() {
     const loadMoreButton = document.querySelector('.load-more-button');
     const projectsGrid = document.querySelector('.projects-grid');
