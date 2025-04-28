@@ -1,52 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loadMoreButton = document.querySelector('.load-more-button');
     const projectsGrid = document.querySelector('.projects-grid');
-    const initialPhotosCount = projectsGrid.children.length; // Початкова кількість фото (3)
-    let loadedPhotosCount = 0; // Кількість вже завантажених додатково фото
+    const projectCards = document.querySelectorAll('.project-card');
+    const initialVisibleCount = 3;
+    let visibleCount = initialVisibleCount;
 
-    // Масив з даними про нові фотографії (URL та підпис)
-    const newPhotosData = [
-  { url: '/src/img/my-project/img_4@x2.jpg', alt: 'STARLIGHT STUDIO LANDING PAGE' },
-  { url: '/src/img/my-project/img_5@x2.jpg', alt: 'ENERGY FLOW WEBSERVICE' },
-  { url: '/src/img/my-project/img_6@x2.jpg', alt: 'FRUITBOX ONLINE STORE' },
-  { url: './img/my-project/img_7@x2.jpg', alt: 'CHEGO JEWELRY WEBSITE' },
-  { url: './img/my-project/img_8@x2.jpg', alt: 'MIMINO WEBSITE' },
-  { url: '../img/my-project/img_9@x2.jpg', alt: 'VYSHYVANKA VIBES LANDING PAGE' },
-  { url: '../img/my-project/img_10@x2.jpg', alt: 'POWER PULSE WEBSERVICE' },
-];
+    // Приховуємо всі картки, крім перших трьох
+    for (let i = initialVisibleCount; i < projectCards.length; i++) {
+        projectCards[i].style.display = 'none';
+    }
 
     if (loadMoreButton) {
         loadMoreButton.addEventListener('click', function() {
-            // Обчислюємо індекс початку завантаження
-            const startIndex = loadedPhotosCount;
-            // Обчислюємо індекс кінця завантаження 
-            const endIndex = Math.min(startIndex + 3, newPhotosData.length);
-            const photosToLoad = newPhotosData.slice(startIndex, endIndex);
+            // Показуємо наступні 3 картки
+            for (let i = visibleCount; i < Math.min(visibleCount + 3, projectCards.length); i++) {
+                projectCards[i].style.display = 'flex'; // Або 'block', залежно від вашої поточної розмітки .project-card
+            }
 
-            if (photosToLoad.length > 0) {
-                photosToLoad.forEach(photoData => {
-                    const projectCard = document.createElement('li');
-                    projectCard.classList.add('project-card');
+            visibleCount += 3;
 
-                    const img = document.createElement('img');
-                    img.src = photoData.url;
-                    img.alt = photoData.alt;
-
-                    const caption = document.createElement('p');
-                    caption.classList.add('project-caption'); // Додаємо клас для стилізації підпису
-                    caption.textContent = photoData.alt;
-
-                    projectCard.appendChild(img);
-                    projectCard.appendChild(caption); // Додаємо підпис до картки
-                    projectsGrid.appendChild(projectCard);
-                });
-
-                loadedPhotosCount += photosToLoad.length;
-
-                // Якщо всі нові фотографії завантажені, ховаємо кнопку
-                if (loadedPhotosCount >= newPhotosData.length) {
-                    loadMoreButton.style.display = 'none';
-                }
+            // Якщо всі картки показано, ховаємо кнопку "LOAD MORE"
+            if (visibleCount >= projectCards.length) {
+                loadMoreButton.style.display = 'none';
             }
         });
     }
