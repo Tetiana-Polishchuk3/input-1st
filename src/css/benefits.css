@@ -50,7 +50,9 @@
   height: 48px;
   border-radius: 8px;
 
+
   background-color: var(--light-green);
+
   margin-bottom: 16px;
 }
 .benefits-icon-expertise {
@@ -73,7 +75,9 @@
   line-height: 28px;
   letter-spacing: 0.5px;
   margin-bottom: 16px;
+
   color: var(--main-text-color);
+
 }
 .benefits-item-text {
   width: 320px;
@@ -147,8 +151,10 @@
 }
 
 /* ======= DESKTOP ======= */
+
 @media (min-width: 1280px) {
   .benefits-section {
+
     margin: 164px auto 0px;
     padding: 0 32px;
     gap: 10px;
