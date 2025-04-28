@@ -37,6 +37,7 @@
   height: 100%;
   max-width: 320px;
   letter-spacing: 0.03em;
+  margin-bottom: 24px;
 }
 
 .review-text {
@@ -83,7 +84,7 @@
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #e4e5e6;
+  background-color: var(--grey-background-color);
 }
 
 /* Прибрати дефолтні стрілки Swiper */
