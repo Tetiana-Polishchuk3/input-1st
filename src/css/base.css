@@ -15,6 +15,7 @@ body.light {
   --icon-color: #292929;
   --border-color: #e0e0e0;
   --grey-background-color: #e4e5e6;
+  --light-green: #bcdfd1;
   --overlay-background: rgba(0, 0, 0, 0.4);
 }
 
@@ -28,6 +29,7 @@ body.dark {
   --icon-color: #f0f0f0;
   --border-color: #3a3a3a;
   --grey-background-color: #2a2d32;
+  --light-green: #204136;
   --overlay-background: rgba(0, 0, 0, 0.4);
 }
 
