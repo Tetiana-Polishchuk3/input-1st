@@ -1,9 +1,6 @@
-/* .footer-container {
-  padding: 20px;
-  text-align: center;
-  font-family: sans-serif;
-} */
-
+.page-footer {
+  padding-top: 120px;
+}
 .footer-logo {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
@@ -52,6 +49,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .page-footer {
+    padding-top: 124px;
+  }
   .footer-social-list {
     flex-direction: row;
     gap: 40px;
@@ -63,6 +63,9 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .page-footer {
+    padding-top: 164px;
+  }
   .footer-list {
     display: flex;
     align-items: center;

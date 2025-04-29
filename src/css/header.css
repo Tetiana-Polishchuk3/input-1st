@@ -61,7 +61,6 @@
   background: #fff;
   box-shadow: 0 0 0 2px #e4e5e6;
   overflow: hidden;
-  margin-left: 20px;
 }
 
 .label-switcher {
@@ -132,15 +131,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header-container {
-    padding: 0 32px;
-  }
-
-  .navigation-header {
-    gap: 166px;
-    padding: 32px 0;
-  }
-
   .nav-logo-header {
     font-size: 32px;
     letter-spacing: 0.05em;
@@ -255,9 +245,7 @@
 
 @media screen and (min-width: 1280px) {
   .header-container {
-    padding: 0 16px;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 0 32px;
   }
 
   .navigation-header {

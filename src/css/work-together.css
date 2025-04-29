@@ -1,17 +1,24 @@
 .contact-section {
-  padding: 24px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 80px;
+
+
 }
 
 .contact-heading {
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 16px;
-  line-height: 1.2;
-  padding: 20px;
+  font-family: Impact, sans-serif;
+  font-weight: 400;
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   display: inline-block;
   border: none;
+  padding: 0;
+
+  font-family: "Impact", sans-serif;
+    font-weight: 400;
+    font-size: 108px;
+  
 }
 
 .contact-heading strong {
@@ -28,6 +35,8 @@
   line-height: 1.5;
   margin-bottom: 24px;
   color: var(--main-text-color);
+  padding-top: 40px;
+  padding-bottom: 32px;
 }
 
 .contact-info {
@@ -135,8 +144,8 @@
 /* ==== MOBILE ==== */
 @media screen and (max-width: 767px) {
   .contact-heading {
-    font-size: 26px;
-    padding: 12px;
+    font-size: 52px;
+   
   }
 
   .contact-button {
@@ -148,10 +157,11 @@
 @media screen and (min-width: 768px) {
   .contact-section {
     padding: 40px;
+    padding-top: 124px;
   }
 
   .contact-heading {
-    font-size: 48px;
+    font-size: px;
   }
 
   .contact-description {
@@ -185,29 +195,80 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    padding: 60px 80px;
+    
+    padding-top: 167px;
   }
 
   .contact-left {
     flex: 1;
   }
-
+.contact-info{
+  flex-direction: column;
+}
   .contact-right {
     flex: 1;
     max-width: 480px;
   }
 
   .contact-heading {
-    font-size: 56px;
-    padding: 30px;
+    font-size: 108px;
+    
     margin-bottom: 24px;
   }
 
   .contact-description {
     font-size: 18px;
+    margin-bottom: 120px;
   }
 
   .contact-form {
     margin-top: 0;
   }
 }
+.contact-link {
+  display: flex;
+  font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    gap: 16px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.headingcontent {
+    display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-right {
+  flex: 1;
+  max-width: 480px;
+}
+.contact-image-wrapper {
+  width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
