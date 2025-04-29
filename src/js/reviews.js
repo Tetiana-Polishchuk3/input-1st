@@ -20,7 +20,7 @@ const fetchReviews = async () => {
     const markup = createSlidesMarkup(data);
     swiperWrapper.innerHTML = markup;
 
-    initSwiper(); // Ініціалізація після вставки
+    initSwiper();
   } catch (error) {
     console.error('Fetch error:', error);
     fallbackText.hidden = false;
