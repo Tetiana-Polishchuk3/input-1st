@@ -31,10 +31,12 @@
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--main-text-color);
   height: 92px;
   width: 320px;
   margin-bottom: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .icon-part {
   z-index: 2;
@@ -43,6 +45,15 @@
   align-items: center;
   white-space: nowrap;
 }
+
+.icon-part svg {
+  transition: transform 0.3s ease;
+}
+
+.button-hero:hover .icon-part svg {
+  transform: translateX(8px);
+}
+
 .hero-icon {
   display: inline-block;
   width: 2em;
@@ -53,7 +64,7 @@
 }
 
 .bg-part {
-  background-color: #bcdfd1;
+  background-color: var(--span-text-color);
   width: 50%;
   height: 100%;
   position: absolute;
@@ -62,10 +73,20 @@
   border-radius: 16px;
   border: none;
   z-index: 1;
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  transform: translateX(100%);
 }
 .bg-part:hover,
 .bg-part:focus {
   background-color: var(--hover-green);
+}
+
+.button-hero:hover .bg-part {
+  transform: translateX(0);
+}
+
+.button-hero:active {
+  transform: scale(0.97);
 }
 
 .image-hero {

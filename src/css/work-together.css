@@ -9,7 +9,7 @@
 }
 
 .contact-heading {
-  font-family: "Impact", sans-serif;
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
   font-size: 108px;
   line-height: 115%;
@@ -47,7 +47,6 @@
   padding-bottom: 32px;
 }
 
-
 .contact-left {
   flex: 1;
   min-width: 300px;
@@ -55,19 +54,16 @@
   animation-delay: 0.3s;
 }
 
-
 .contact-right {
   flex: 1;
   max-width: 480px;
   animation: fadeInUp 1s ease forwards;
 }
 
-
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  
 }
 
 .contact-item {
@@ -104,7 +100,6 @@
   gap: 16px;
 }
 
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -132,7 +127,7 @@
 
 .contact-textarea {
   min-height: 120px;
-  resize: vertical;
+  resize: none;
 }
 
 .contact-button {
@@ -153,7 +148,6 @@
   background-color: var(--hover-green);
 }
 
-
 .contact-image-wrapper {
   width: 100%;
   max-height: 300px;
@@ -169,7 +163,6 @@
   object-fit: cover;
 }
 
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -181,7 +174,6 @@
     transform: translateY(0);
   }
 }
-
 
 @media screen and (max-width: 767px) {
   .contact-section {
@@ -196,9 +188,23 @@
   .contact-button {
     width: 100%;
   }
- 
 }
 
+.contact-textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.invalid {
+  border: 1px solid red !important;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
 
 @media screen and (min-width: 768px) {
   .contact-section {
@@ -228,9 +234,7 @@
     font-size: 18px;
     max-width: 200px;
   }
-    
 }
-
 
 @media screen and (min-width: 1280px) {
   .contact-section {
@@ -245,18 +249,17 @@
 
   .contact-description {
     font-size: 18px;
-   
   }
-.contact-info {
-  flex-direction: column;
-  flex-wrap: wrap;
+  .contact-info {
+    flex-direction: column;
+    flex-wrap: wrap;
 
-  gap: 32px;
-}
-  
-     .contact-image-wrapper {
-       display: flex;
-     }
+    gap: 32px;
+  }
+
+  .contact-image-wrapper {
+    display: flex;
+  }
 }
 @media screen and (max-width: 1279px) {
   .contact-right {
