@@ -5,4 +5,3 @@ import './js/mobile-menu.js';
 import './js/my-projects.js';
 import './js/reviews.js';
 import './js/switcher';
-import './js/work-together.js';
