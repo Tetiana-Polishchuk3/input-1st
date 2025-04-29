@@ -117,9 +117,9 @@
 .faq-title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
-  font-size: 108px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-text-color);
   margin: 0;
@@ -138,7 +138,7 @@
 @media screen and (min-width: 768px) {
   .faq-title {
     font-size: 108px;
-    line-height: 115%;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     max-width: 592px;
     margin-bottom: 60px;
