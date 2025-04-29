@@ -36,7 +36,7 @@
 
 .project-card {
   overflow: hidden;
-  display: flex; /* Або block, залежно від  поточної розмітки */
+  display: flex;
   flex-direction: column;
 }
 
@@ -66,7 +66,7 @@
 .project-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   padding-top: 20px;
 }
 
@@ -103,7 +103,7 @@
   letter-spacing: 0.2px;
   color: var(--main-text-color);
   border: none;
-  padding: 10px 15px;
+  padding: 5px 7px;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -166,6 +166,14 @@
     letter-spacing: 1.8px;
     line-height: 124px;
     margin-bottom: 60px;
+  }
+
+  .project-info {
+    align-items: center;
+  }
+
+  .project-visit-button {
+    padding: 10px 15px;
   }
 
   .load-more-button {
