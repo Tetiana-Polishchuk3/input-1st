@@ -19,6 +19,7 @@
   gap: 16px;
   align-items: center;
 }
+
 .author-avatar {
   width: 40px;
   height: 40px;
@@ -32,8 +33,8 @@
   background-color: var(--accent-background-color);
   border-radius: 16px;
   padding: 32px;
-  min-height: 296px;
-  max-height: 350px;
+  min-height: 320px;
+  max-height: 320px;
   height: 100%;
   max-width: 320px;
   letter-spacing: 0.03em;
@@ -77,13 +78,14 @@
   transition: background-color 0.3s, opacity 0.3s;
   width: 40px;
   height: 40px;
-  padding: 12px;
+  box-sizing: border-box;
+  padding: 8px;
   border: 1px solid var(--main-text-color);
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #e4e5e6;
+  background-color: var(--grey-background-color);
 }
 
 /* Прибрати дефолтні стрілки Swiper */
