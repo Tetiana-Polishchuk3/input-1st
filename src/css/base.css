@@ -9,11 +9,13 @@ body.light {
   --main-text-color: #292929;
   --span-text-color: #00b068;
   --main-background-color: #f0f0f0;
-  --accent-background-color: #ffffff;
+  --accent-background-color: #e4e5e6;
   --background-color: #f9f9f9;
   --hover-green: #00b068;
   --icon-color: #292929;
   --border-color: #e0e0e0;
+  --grey-background-color: #e4e5e6;
+  --light-green: #bcdfd1;
   --overlay-background: rgba(0, 0, 0, 0.4);
 }
 
@@ -26,6 +28,8 @@ body.dark {
   --hover-green: #009156;
   --icon-color: #f0f0f0;
   --border-color: #3a3a3a;
+  --grey-background-color: #2a2d32;
+  --light-green: #204136;
   --overlay-background: rgba(0, 0, 0, 0.4);
 }
 

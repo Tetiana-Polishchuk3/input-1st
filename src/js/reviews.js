@@ -51,8 +51,8 @@ function initSwiper() {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-next',
       disabledClass: 'swiper-button-disabled',
     },
     keyboard: {
