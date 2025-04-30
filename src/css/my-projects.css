@@ -2,29 +2,24 @@
 .projects {
   padding: 80px 20px;
 }
-
 .projects .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
 }
-
 .projects .section-title {
   color: var(--main-text-color);
   text-align: center;
   white-space: nowrap;
   margin-bottom: 40px;
-
   font-family: Impact;
   font-size: 52px;
   letter-spacing: 1.8px;
   line-height: 64px;
 }
-
 .projects .section-title .accent {
   color: var(--span-text-color);
 }
-
 .projects-grid {
   list-style: none;
   padding: 0;
@@ -33,13 +28,11 @@
   flex-direction: column;
   gap: 80px;
 }
-
 .project-card {
   overflow: hidden;
-  display: flex;
+  display: flex; /* Або block, залежно від  поточної розмітки */
   flex-direction: column;
 }
-
 .project-card img {
   display: block;
   width: 100%;
@@ -48,35 +41,24 @@
   object-fit: cover;
   border-radius: 16px;
 }
-
 .project-technologies {
   padding-top: 16px;
-
   margin: 0;
-
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-
 .project-info {
-
   align-items: center;
-
-  display: flex;
-  justify-content: space-between;
-  
   padding-top: 20px;
 }
 .project-wrapper {
   display: flex;
   justify-content: flex-end;
 }
-
 .project-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -86,10 +68,8 @@
   text-transform: uppercase;
   color: var(--main-text-color);
 }
-
 .project-caption {
   font-family: 'Poppins Regular';
-
   font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
@@ -97,7 +77,6 @@
   text-transform: uppercase;
   color: var(--main-text-color);
 }
-
 .project-visit-button {
   display: flex;
   align-items: center;
@@ -108,21 +87,18 @@
   letter-spacing: 0.2px;
   color: var(--main-text-color);
   border: none;
-  padding: 5px 7px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
   background: var(--accent-background-color);
 }
-
 .project-visit-button svg {
   fill: var(--main-text-color);
 }
-
 .project-visit-button:hover {
   background-color: #bbbbbb;
 }
-
 .load-more-button {
   display: flex;
   flex-direction: column;
@@ -138,7 +114,6 @@
   margin: 40px auto 0 auto;
   cursor: pointer;
 }
-
 .load-more-button::after {
   content: '';
   display: block;
@@ -148,15 +123,12 @@
   margin-top: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .load-more-button:hover {
   color: var(--hover-green);
 }
-
 .load-more-button:hover::after {
   background-color: var(--hover-green);
 }
-
 /* Адаптивні стилі для планшетів (від 768px) */
 @media screen and (min-width: 768px) {
   .project-title {
@@ -172,19 +144,9 @@
     line-height: 124px;
     margin-bottom: 60px;
   }
-
-  .project-info {
-    align-items: center;
-  }
-
-  .project-visit-button {
-    padding: 10px 15px;
-  }
-
   .load-more-button {
     font-size: 18px;
   }
-
   .load-more-button::after {
     height: 2px;
     margin-top: 10px;
@@ -194,39 +156,32 @@
     justify-content: space-between;
   }
 }
-
 /* Адаптивні стилі для десктопів (від 1280px) */
 @media screen and (min-width: 1280px) {
   .projects {
     padding: 120px 40px;
   }
-
   .projects .section-title {
     margin-bottom: 80px;
   }
-
   .load-more-button {
     font-size: 20px;
   }
-
   .load-more-button::after {
     height: 2px;
     margin-top: 12px;
   }
 }
-
 /* Стилі для мобільних (до 767px) */
 @media screen and (max-width: 767px) {
   .projects .section-title {
     font-size: 40px;
     line-height: 1.6;
   }
-
   .load-more-button {
     font-size: 14px;
     margin-top: 30px;
   }
-
   .load-more-button::after {
     height: 2px;
     margin-top: 6px;
