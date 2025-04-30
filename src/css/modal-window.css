@@ -62,6 +62,7 @@ body.modal-open {
     width: 24px;
     height: 24px;
     outline: none;
+    background: none;
   }
 
   .titleTextContainer {
@@ -109,7 +110,6 @@ body.modal-open {
     right: 20px;
     width: 24px;
     height: 24px;
-    background: none;
   }
 
   .titleTextContainer {
