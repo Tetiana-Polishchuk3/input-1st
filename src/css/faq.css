@@ -108,7 +108,7 @@
   color: var(--main-text-color);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  transition: max-height 0, 3s ease, margin-top 0, 3s ease;
 }
 .accordion-item.active .accordion-content {
   max-height: 500px;

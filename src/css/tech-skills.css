@@ -44,7 +44,7 @@
   min-width: 100%;
   white-space: nowrap;
   animation-name: techSkillsLine;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -76,5 +76,11 @@
   }
   .running-ts-line {
     padding: 40px 8px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .running-ts-line {
+    animation-duration: 5s;
   }
 }
