@@ -72,6 +72,8 @@
   cursor: pointer;
   position: relative;
   display: block;
+  border: 2px solid;
+  border-color: gray;
 }
 
 .circle {
@@ -93,7 +95,7 @@
 }
 
 .sun {
-  color: #ffd700;
+  color: orange;
   margin-top: 0%;
   opacity: 1;
 }
@@ -205,7 +207,7 @@
   }
 
   .sun {
-    color: #ffd600;
+    color: orange;
     margin-top: 0%;
     opacity: 1;
   }
